@@ -4,13 +4,27 @@
   "description": "Client Side of Ozen Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:assets": "cross-env WEBPACK_ENV=development webpack -w",
+    "build:assets": "WEBPACK_ENV=production webpack"
   },
   "author": "Sungmin Kim, Tongil Kim",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^3.0.1",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
   }
 }
