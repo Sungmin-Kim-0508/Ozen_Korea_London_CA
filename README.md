@@ -1,8 +1,8 @@
-#Ozen Korea London Ontario Canada
+# Ozen Korea London Ontario Canada
 
-##About
+## About
 
-##Description
+## Description
 
-##What Tech we use
--React.js
+## What Tech we use
+- React.js
