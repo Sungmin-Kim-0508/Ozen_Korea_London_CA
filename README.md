@@ -6,3 +6,4 @@
 
 ## What Tech we use
 - React.js
+- SCSS
