@@ -120,7 +120,4 @@ chrome-user-data
 *.swp
 *.swo
 
-favicon.ico
-logo.svg
-serviceWorker.js
 yarn.lock
