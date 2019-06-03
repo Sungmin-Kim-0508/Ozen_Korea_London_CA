@@ -4,7 +4,7 @@ class Home extends PureComponent {
   render() {
     return (
       <div>
-        <p>this is home</p>
+        <p>This is Ozen_Sushi home</p>
       </div>
     );
   }

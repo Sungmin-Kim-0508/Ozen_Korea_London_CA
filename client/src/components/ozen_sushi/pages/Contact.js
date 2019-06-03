@@ -1,13 +1,13 @@
 import React, { PureComponent } from "react";
 
-class About extends PureComponent {
+class Contact extends PureComponent {
   render() {
     return (
       <div>
-        <p>This is about</p>
+        <p>This is Ozen_Sushi Contact</p>
       </div>
     );
   }
 }
 
-export default About;
+export default Contact;
