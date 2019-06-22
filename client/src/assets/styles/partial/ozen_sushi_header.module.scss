@@ -1,9 +1,26 @@
 @import "../variables";
 
-.container_sushi_header {
-  background-color: coral;
+ul {
+  display: grid;
+  justify-content: center;
+  grid-auto-flow: column;
+  justify-content: space-evenly;
+  background-color: black;
 
-  .container_sushi_header__ul__li__a {
-    text-decoration: none;
+  > li {
+    width: 7vw;
+    height: 7vh;
+    margin-top: 20px;
+    .container_sushi_header__ul__li__a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  > .ozen_sushi_logo {
+    background-image: url("../../images/Ozen_sushi_Logo.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 10px;
   }
 }
