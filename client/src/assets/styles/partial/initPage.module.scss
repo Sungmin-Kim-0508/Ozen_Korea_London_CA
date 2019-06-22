@@ -1,4 +1,8 @@
 // Do not use dash(-). Instead, use underscore(_)
 .container_initPage {
-  background-color: cyan;
+  background-color: darkgray;
+  .container_initPage__ul__li__a {
+    text-decoration: none;
+    color: red;
+  }
 }
