@@ -1,22 +1,38 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import style from "../../../assets/styles/partial/ozen_sushi_header.module.scss";
 
 const Header = props => {
   const { ozen_sushi } = props;
   return (
-    <>
+    <div className={style.container_sushi_header}>
       <ul>
         <li>
-          <Link to={ozen_sushi}>Home</Link>
+          <NavLink
+            className={style.container_sushi_header__ul__li__a}
+            to={ozen_sushi}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to={`${ozen_sushi}/about`}>About</Link>
+          <NavLink
+            className={style.container_sushi_header__ul__li__a}
+            to={`${ozen_sushi}/about`}
+          >
+            About
+          </NavLink>
         </li>
         <li>
-          <Link to={`${ozen_sushi}/contact`}>Contact Us</Link>
+          <NavLink
+            className={style.container_sushi_header__ul__li__a}
+            to={`${ozen_sushi}/contact`}
+          >
+            Contact Us
+          </NavLink>
         </li>
       </ul>
-    </>
+    </div>
   );
 };
 
