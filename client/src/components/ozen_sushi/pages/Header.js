@@ -5,7 +5,7 @@ import style from "../../../assets/styles/partial/ozen_sushi_header.module.scss"
 const Header = props => {
   const { ozen_sushi } = props;
   return (
-    <>
+    <nav>
       <ul>
         <li className={style.ozen_sushi_logo}>
           <NavLink to={ozen_sushi} />
@@ -43,7 +43,7 @@ const Header = props => {
           </NavLink>
         </li>
       </ul>
-    </>
+    </nav>
   );
 };
 

@@ -1,0 +1,121 @@
+.container {
+  display: grid;
+  grid-template-rows: 70vh 70vh 140vh 150vh;
+  grid-auto-columns: 100%;
+  grid-gap: 50px;
+
+  .first_section {
+    background-image: url("https://imgcp.aacdn.jp/img-a/1200/900/global-aaj-front/article/2018/12/5c036dfae0936_5c036debf1871_107025549.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 90%;
+    text-align: right;
+    padding-top: 400px;
+    padding-right: 150px;
+    font-size: 4rem;
+    color: white;
+    > span {
+      color: #debe07;
+    }
+  }
+
+  @mixin boxBorderTop() {
+    border-top: 10px solid #464646;
+  }
+  @mixin alignGridItem($horizontally, $vertically) {
+    display: grid;
+    justify-content: $horizontally;
+    align-content: $vertically;
+  }
+
+  .second_section {
+    background-color: aquamarine;
+  }
+
+  .third_section {
+    @include boxBorderTop();
+    display: grid;
+    grid-template-areas:
+      "top top top"
+      "mid_first mid_second mid_second"
+      "bottom bottom bottom";
+    grid-gap: 30px;
+    padding: 25px 8rem 0px 8rem;
+    grid-auto-columns: auto auto auto;
+    grid-template-rows: 20vh 50vh 57vh;
+
+    .top {
+      grid-area: top;
+      font-size: 2em;
+      color: #464646;
+      padding-top: 30px;
+      > span {
+        font-size: 2.2em;
+        font-weight: 650;
+      }
+    }
+    .mid_first {
+      grid-area: mid_first;
+      background-color: chocolate;
+    }
+    .mid_second {
+      grid-area: mid_second;
+      background-color: cadetblue;
+    }
+    .bottom {
+      display: grid;
+      grid-area: bottom;
+      background-color: black;
+      color: white;
+      font-size: 4em;
+      @include alignGridItem(center, center);
+    }
+  }
+
+  .fourth_section {
+    background-color: white;
+    @include boxBorderTop();
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));
+    grid-gap: 40px;
+
+    @mixin squareForFourthSection() {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .first_row {
+      @include alignGridItem(center, center);
+      font-size: 4em;
+    }
+    .row {
+      @include squareForFourthSection();
+
+      .menu {
+        color: white;
+        background-color: black;
+        @include alignGridItem(center, center);
+
+        > .menu__name {
+          font-size: 2em;
+          margin-bottom: 15px;
+        }
+
+        > .menu__detail {
+          font-size: 1.3em;
+        }
+      }
+
+      .menu__price {
+        color: #debe07;
+        font-size: 2em;
+        text-align: end;
+        padding-top: 3em;
+      }
+      .menu_photo {
+        background-color: #debe07;
+      }
+    }
+  }
+}
