@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Acme&display=swap");
 @import "../variables";
 
 ul {
@@ -6,7 +7,8 @@ ul {
   grid-auto-flow: column;
   justify-content: space-evenly;
   background-color: black;
-
+  font-family: "Acme", sans-serif;
+  font-size: 1.7rem;
   > li {
     width: 10vw;
     height: 7vh;
