@@ -119,3 +119,4 @@ chrome-user-data
 .vscode
 *.swp
 *.swo
+server/public/.*
