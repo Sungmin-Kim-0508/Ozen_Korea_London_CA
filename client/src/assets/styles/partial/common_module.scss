@@ -1,0 +1,40 @@
+@mixin container() {
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-gap: 50px;
+  font-family: "Acme", sans-serif;
+
+  .font_roboto {
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+@mixin firstSectionBox() {
+  background-image: url("https://imgcp.aacdn.jp/img-a/1200/900/global-aaj-front/article/2018/12/5c036dfae0936_5c036debf1871_107025549.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 90%;
+  text-align: right;
+  padding-top: 400px;
+  padding-right: 150px;
+  font-size: 4rem;
+  color: white;
+  > span {
+    color: #debe07;
+  }
+}
+
+@mixin Ozen_Font($fontSize, $fontWeight) {
+  span.OZen {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+  }
+}
+
+@mixin Korean_And_Japanese_Font($fontSize, $fontWeight) {
+  span.korean_japanese {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    margin-left: 20px;
+  }
+}

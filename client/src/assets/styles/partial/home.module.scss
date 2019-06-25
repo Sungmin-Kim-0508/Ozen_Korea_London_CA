@@ -1,30 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Acme&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import "./common_module.scss";
 
 .container {
-  display: grid;
+  // container() comes from common_module.scss in the same directory.
+  @include container();
   grid-template-rows: 70vh 70vh 140vh 150vh;
-  grid-auto-columns: 100%;
-  grid-gap: 50px;
-  font-family: "Acme", sans-serif;
-
-  .font_roboto {
-    font-family: "Roboto", sans-serif;
-  }
 
   .first_section {
-    background-image: url("https://imgcp.aacdn.jp/img-a/1200/900/global-aaj-front/article/2018/12/5c036dfae0936_5c036debf1871_107025549.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0% 90%;
-    text-align: right;
-    padding-top: 400px;
-    padding-right: 150px;
-    font-size: 4rem;
-    color: white;
-    > span {
-      color: #debe07;
-    }
+    // firstSectionBox() comes from common_module.scss in the same directory.
+    @include firstSectionBox();
   }
 
   @mixin boxBorderTop() {
@@ -57,16 +42,8 @@
       font-size: 2em;
       color: #464646;
       padding-top: 30px;
-      > span {
-        font-size: 2.5em;
-        font-weight: 400;
-      }
-
-      > span.korean_japanese {
-        font-size: 1.5em;
-        font-weight: 300;
-        margin-left: 20px;
-      }
+      @include Ozen_Font(2.5em, 400);
+      @include Korean_And_Japanese_Font(1.5em, 300);
     }
     .mid_first {
       grid-area: mid_first;
