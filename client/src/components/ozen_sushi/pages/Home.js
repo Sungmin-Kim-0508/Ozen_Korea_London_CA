@@ -15,7 +15,7 @@ class Home extends PureComponent {
         <div className={style.second_section}>Main 2</div>
         <div className={style.third_section}>
           <div className={style.top}>
-            <span>O"Zen</span>
+            <span className={style.OZen}>O"Zen</span>
             <span className={`${style.korean_japanese} ${style.font_roboto}`}>
               Korean & Japanese
             </span>
