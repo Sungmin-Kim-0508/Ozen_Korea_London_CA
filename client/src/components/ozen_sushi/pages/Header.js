@@ -6,7 +6,7 @@ const Header = props => {
   const { ozen_sushi } = props;
   return (
     <nav>
-      <ul>
+      <ul className={style.header__nav__ul}>
         <li className={style.ozen_sushi_logo}>
           <NavLink to={ozen_sushi} />
         </li>
