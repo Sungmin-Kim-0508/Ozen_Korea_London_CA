@@ -26,13 +26,15 @@
 
 @mixin Ozen_Font($fontSize, $fontWeight) {
   span.OZen {
+    font-family: "Acme", sans-serif;
     font-size: $fontSize;
     font-weight: $fontWeight;
   }
 }
 
 @mixin Korean_And_Japanese_Font($fontSize, $fontWeight) {
-  span.korean_japanese {
+  span.korean_japanese,
+  .footer__information__navList__ul__li {
     font-size: $fontSize;
     font-weight: $fontWeight;
     margin-left: 20px;

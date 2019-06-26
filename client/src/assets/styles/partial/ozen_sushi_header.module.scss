@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Acme&display=swap");
 @import "../variables";
 
-ul {
+ul.header__nav__ul {
   display: grid;
   justify-content: center;
   grid-auto-flow: column;

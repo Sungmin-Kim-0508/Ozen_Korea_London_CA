@@ -3,6 +3,7 @@
 
 .container {
   @include container();
+  height: 190vh;
   grid-template-rows: 70vh 70vh;
 
   .first_section {

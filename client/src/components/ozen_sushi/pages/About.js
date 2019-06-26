@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 class About extends PureComponent {
   render() {
     return (
-      <div>
+      <>
         <Helmet>
           <title>About | Ozen Sushi</title>
         </Helmet>
@@ -57,7 +57,7 @@ class About extends PureComponent {
             </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

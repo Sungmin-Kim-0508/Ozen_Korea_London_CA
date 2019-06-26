@@ -5,7 +5,7 @@
 .container {
   // container() comes from common_module.scss in the same directory.
   @include container();
-  grid-template-rows: 70vh 70vh 140vh 150vh;
+  grid-template-rows: 70vh 70vh 140vh 150vh 20vh;
 
   .first_section {
     // firstSectionBox() comes from common_module.scss in the same directory.
@@ -107,6 +107,27 @@
       .menu_photo {
         background-color: #debe07;
       }
+    }
+  }
+
+  .fifth_section {
+    display: grid;
+    grid-auto-flow: column;
+    align-content: center;
+    justify-content: center;
+    grid-gap: 20px;
+
+    .uber_eats {
+      background-image: url("../../images/uber_eats.PNG");
+      background-size: cover;
+      width: 120px;
+      height: 120px;
+    }
+    .skip_the_dishes {
+      background-image: url("../../images/skip_the_dishes.PNG");
+      background-size: cover;
+      width: 120px;
+      height: 120px;
     }
   }
 }

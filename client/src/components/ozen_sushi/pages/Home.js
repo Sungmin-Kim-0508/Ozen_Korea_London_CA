@@ -57,6 +57,13 @@ class Home extends PureComponent {
             </div>
           </div>
         </div>
+        <div className={style.fifth_section}>
+          <a href="#" className={style.uber_eats} />
+          <a
+            href="https://www.skipthedishes.com/"
+            className={style.skip_the_dishes}
+          />
+        </div>
       </div>
     );
   }
