@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import style from "../../../assets/styles/partial/about.module.scss";
+import style from "../../../assets/styles/partial/ozen_sushi_about.module.scss";
 import { Helmet } from "react-helmet";
 
 class About extends PureComponent {

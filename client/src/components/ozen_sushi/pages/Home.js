@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { Helmet } from "react-helmet";
-import style from "../../../assets/styles/partial/home.module.scss";
+import style from "../../../assets/styles/partial/ozen_sushi_home.module.scss";
 import skipdish from "../../../assets/images/skip_06.png";
 import uberEat from "../../../assets/images/uber-eats_03.png";
 import ozen_sushi_img from "../../../assets/images/about_ozen_sushi.png";
