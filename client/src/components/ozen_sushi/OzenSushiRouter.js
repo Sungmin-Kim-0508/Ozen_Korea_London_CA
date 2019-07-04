@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "../ozen_sushi/pages/Header";
 import About from "../ozen_sushi/pages/About";
 import Contact from "../ozen_sushi/pages/Contact";
-import Footer from "../_sharedComponent/Footer";
+import Footer from "./pages/Footer";
 
 class OzenSushiRouter extends Component {
   render() {
@@ -19,7 +19,7 @@ class OzenSushiRouter extends Component {
             <Route exact path={url} component={Home} />
             <Route path={`${url}/about`} component={About} />
             <Route path={`${url}/contact`} component={Contact} />
-            <Footer />
+            {/* <Footer /> */}
           </Router>
         </Switch>
       </>
