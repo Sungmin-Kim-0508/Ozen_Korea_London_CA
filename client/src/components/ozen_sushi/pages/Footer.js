@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import style from "../../assets/styles/partial/ozen_sushi_footer.module.scss";
+import style from "../../../assets/styles/partial/ozen_sushi_footer.module.scss";
 
 class Footer extends PureComponent {
   render() {

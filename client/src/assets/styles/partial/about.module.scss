@@ -8,7 +8,7 @@
 
   .first_section {
     // firstSectionBox() comes from common_module.scss in the same directory.
-    @include firstSectionBox();
+    // @include firstSectionBox();
     opacity: 0.5;
   }
 

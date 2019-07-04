@@ -1,14 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import style from "../../../assets/styles/partial/ozen_sushi_header.module.scss";
+import logo from "../../../assets/images/Ozen_sushi_Logo.jpg";
 
 const Header = props => {
   const { ozen_sushi } = props;
   return (
     <nav>
       <ul className={style.header__nav__ul}>
-        <li className={style.ozen_sushi_logo}>
-          <NavLink to={ozen_sushi} />
+        <li>
+          <NavLink to={ozen_sushi}>
+            <img className={style.ozen_sushi_logo} src={logo} />
+          </NavLink>
         </li>
         <li className={style.home}>
           <NavLink
@@ -26,7 +29,7 @@ const Header = props => {
             About
           </NavLink>
         </li>
-        <li className={style.contact_us}>
+        <li className={style.menu}>
           <NavLink
             className={style.container_sushi_header__ul__li__a}
             to={`${ozen_sushi}/menu`}

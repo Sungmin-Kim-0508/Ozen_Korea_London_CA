@@ -1,133 +1,189 @@
 @import url("https://fonts.googleapis.com/css?family=Acme&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import "./common_module.scss";
+@import "../variables";
 
 .container {
-  // container() comes from common_module.scss in the same directory.
-  @include container();
-  grid-template-rows: 70vh 70vh 140vh 150vh 20vh;
+  display: grid;
+  grid-gap: 50px;
+}
 
-  .first_section {
-    // firstSectionBox() comes from common_module.scss in the same directory.
-    @include firstSectionBox();
+.section_1 {
+  position: relative;
+  @include firstSectionBox(false);
+
+  .letters {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 3rem;
+    font-size: 4rem;
+    span {
+      color: #debe07;
+    }
+  }
+}
+
+/*  section 2 */
+.section_2 {
+  display: grid;
+  min-height: 400px;
+  background-color: cadetblue;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.section_3 {
+  display: grid;
+  grid-template-areas:
+    "top top top"
+    "mid_first mid_second mid_second"
+    "bottom bottom bottom";
+  grid-gap: 30px;
+  padding: 20px 60px;
+  border-top: 3px solid $dark;
+  border-bottom: 3px solid $dark;
+
+  .top {
+    grid-area: top;
+    .OZen {
+      font-size: 6rem;
+    }
+    .korean_japanese {
+      display: inline-block;
+      font-size: 3rem;
+    }
   }
 
-  @mixin boxBorderTop() {
-    border-top: 10px solid #464646;
+  .mid_first {
+    grid-area: mid_first;
+    img {
+      max-height: 15rem;
+    }
   }
-  @mixin alignGridItem($horizontally, $vertically) {
+
+  .mid_second {
+    grid-area: mid_second;
+  }
+
+  .bottom {
+    grid-area: bottom;
+    position: relative;
+    min-height: 200px;
+    background-color: $black;
+    color: $white;
+
     display: grid;
-    justify-content: $horizontally;
-    align-content: $vertically;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+  }
+}
+
+.section_4 {
+  display: grid;
+  grid-gap: 30px;
+
+  .top {
+    font-size: 4rem;
+    text-align: center;
   }
 
-  .second_section {
-    background-color: aquamarine;
-  }
-
-  .third_section {
-    @include boxBorderTop();
+  .row {
     display: grid;
-    grid-template-areas:
-      "top top top"
-      "mid_first mid_second mid_second"
-      "bottom bottom bottom";
-    grid-gap: 30px;
-    padding: 25px 8rem 0px 8rem;
-    grid-auto-columns: auto auto auto;
-    grid-template-rows: 20vh 50vh 57vh;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 200px;
+    background-color: $black;
+    color: $white;
 
-    .top {
-      grid-area: top;
-      font-size: 2em;
-      color: #464646;
-      padding-top: 30px;
-      @include Ozen_Font(2.5em, 400);
-      @include Korean_And_Japanese_Font(1.5em, 300);
+    .right_justify {
+      justify-content: right;
+      text-align: right;
     }
-    .mid_first {
-      grid-area: mid_first;
-      background-color: chocolate;
-    }
-    .mid_second {
-      grid-area: mid_second;
-      background-color: cadetblue;
-    }
-    .bottom {
+
+    .menu {
       display: grid;
-      grid-area: bottom;
-      background-color: black;
-      color: white;
-      font-size: 4em;
-      @include alignGridItem(center, center);
-    }
-  }
-
-  .fourth_section {
-    background-color: white;
-    @include boxBorderTop();
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));
-    grid-gap: 40px;
-
-    @mixin squareForFourthSection() {
-      display: grid;
-      grid-auto-flow: column;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    .first_row {
-      @include alignGridItem(center, center);
-      font-size: 4em;
-    }
-    .row {
-      @include squareForFourthSection();
-
-      .menu {
-        color: white;
-        background-color: black;
-        @include alignGridItem(center, center);
-
-        > .menu__name {
-          font-size: 2.3em;
-          margin-bottom: 15px;
-        }
-
-        > .menu__detail {
-          font-size: 1.5em;
-        }
+      padding: 2rem 3rem;
+      .menu__name {
+        font-size: 2.5rem;
       }
-
+      .menu__detail {
+        font-size: 1.5rem;
+      }
       .menu__price {
         color: #debe07;
-        font-size: 2em;
-        text-align: end;
-        padding-top: 3em;
+        font-size: 2rem;
+        position: relative;
       }
-      .menu_photo {
-        background-color: #debe07;
+    }
+
+    .menu_photo {
+      background-color: #debe07;
+    }
+  }
+}
+
+.section_5 {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  grid-gap: 20px;
+}
+
+/*  Smart Phone   */
+@media (max-width: 500px) {
+  .section_1 {
+    .letters {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin-right: 10px;
+      font-size: 3rem;
+      span {
+        color: #debe07;
       }
     }
   }
 
-  .fifth_section {
+  .section_3 {
     display: grid;
-    grid-auto-flow: column;
-    align-content: center;
-    justify-content: center;
     grid-gap: 20px;
+    grid-template-areas:
+      "top"
+      "mid_first"
+      "mid_second"
+      "bottom";
 
-    .uber_eats {
-      background-image: url("../../images/uber_eats.PNG");
-      background-size: cover;
-      width: 120px;
-      height: 120px;
+    .top {
+      .OZen {
+        font-size: 2.5rem;
+      }
+      .korean_japanese {
+        font-size: 1.5rem;
+      }
     }
-    .skip_the_dishes {
-      background-image: url("../../images/skip_the_dishes.PNG");
-      background-size: cover;
-      width: 120px;
-      height: 120px;
+
+    .mid_second {
+      img {
+        min-height: 200px;
+      }
+    }
+  }
+
+  .section_4 {
+    .row {
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: 1fr;
+      text-align: center;
+
+      .right_justify {
+        text-align: center;
+      }
+    }
+  }
+
+  .section_5 {
+    > a > img {
+      max-width: 100px;
     }
   }
 }
