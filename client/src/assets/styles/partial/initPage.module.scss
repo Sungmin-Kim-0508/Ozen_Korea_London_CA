@@ -1,8 +1,19 @@
 // Do not use dash(-). Instead, use underscore(_)
 .container_initPage {
-  background-color: darkgray;
-  .container_initPage__ul__li__a {
-    text-decoration: none;
-    color: red;
+  .leftside {
+    background-image: url("../../images/Ozen_sushi_Logo.jpg");
+    background-repeat: no-repeat;
+    background-color: black;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+  }
+  .rightside {
+    background-image: url("../../images/Ozen_korea_logo.jpg");
+    background-repeat: no-repeat;
+    background-color: green;
+    right: 0;
+    width: 50%;
+    height: 100vh;
   }
 }
