@@ -19,7 +19,7 @@ class OzenSushiRouter extends Component {
             <Route exact path={url} component={Home} />
             <Route path={`${url}/about`} component={About} />
             <Route path={`${url}/contact`} component={Contact} />
-            {/* <Footer /> */}
+            <Footer />
           </Router>
         </Switch>
       </>

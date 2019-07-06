@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { Helmet } from "react-helmet";
-import style from "../../../assets/styles/partial/home.module.scss";
+import style from "../../../assets/styles/partial/ozen_sushi_home.module.scss";
 import skipdish from "../../../assets/images/skip_06.png";
 import uberEat from "../../../assets/images/uber-eats_03.png";
 import ozen_sushi_img from "../../../assets/images/about_ozen_sushi.png";
@@ -73,13 +73,10 @@ class Home extends PureComponent {
         </section>
         {/* section 5 */}
         <section className={style.section_5}>
-          <a href="#" className={style.uber_eats}>
+          <a href="https://www.skipthedishes.com/" className={style.uber_eats}>
             <img src={skipdish} />
           </a>
-          <a
-            href="https://www.skipthedishes.com/"
-            className={style.skip_the_dishes}
-          >
+          <a href="#" className={style.skip_the_dishes}>
             <img src={uberEat} />
           </a>
         </section>
