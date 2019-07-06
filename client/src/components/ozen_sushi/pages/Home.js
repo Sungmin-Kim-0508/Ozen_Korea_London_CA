@@ -73,13 +73,10 @@ class Home extends PureComponent {
         </section>
         {/* section 5 */}
         <section className={style.section_5}>
-          <a href="#" className={style.uber_eats}>
+          <a href="https://www.skipthedishes.com/" className={style.uber_eats}>
             <img src={skipdish} />
           </a>
-          <a
-            href="https://www.skipthedishes.com/"
-            className={style.skip_the_dishes}
-          >
+          <a href="#" className={style.skip_the_dishes}>
             <img src={uberEat} />
           </a>
         </section>

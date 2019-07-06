@@ -21,7 +21,10 @@ class Footer extends PureComponent {
             <div className={style.googleMap}>map</div>
             <div className={style.address}>
               <span className={style.pinpoint_img} />
-              <div>103-541, Oxford St W, London,</div>
+              <div>
+                <i className="fas fa-map-marker-alt" /> 103-541, Oxford St W,
+                London,
+              </div>
               <div>ON N6H 0H9, CA</div>
             </div>
           </section>
