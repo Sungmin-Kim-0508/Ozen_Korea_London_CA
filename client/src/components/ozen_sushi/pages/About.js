@@ -10,9 +10,7 @@ class About extends PureComponent {
           <title>About | Ozen Sushi</title>
         </Helmet>
         <div className={style.container}>
-          <div className={style.section_1}>
-            <span />
-          </div>
+          {/* <div className={style.section_1} /> */}
           <div className={style.section_2}>
             <div className={style.wrapper}>
               <div className={style.title}>

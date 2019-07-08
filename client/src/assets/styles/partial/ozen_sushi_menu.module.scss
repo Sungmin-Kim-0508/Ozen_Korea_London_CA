@@ -1,0 +1,143 @@
+@import "./common_module.scss";
+
+.section_1 {
+  @include firstSectionBox(true);
+  margin-bottom: 50px;
+}
+
+.section_2 {
+  display: grid;
+  padding: 0 10rem;
+  grid-gap: 20px;
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .category {
+    background-color: #ebebeb;
+    font-size: 1.5rem;
+    /*  === Fixing the size of cell regardless of the content ===   */
+    table-layout: fixed;
+    width: 100%;
+    /*  ==========================================================  */
+
+    tr {
+      th {
+        padding: 10px 0;
+        border-right: 1px solid black;
+      }
+      th:last-child {
+        border-right: 0;
+      }
+      th:hover {
+        background-color: black;
+        color: #ebebeb;
+      }
+    }
+  }
+
+  .photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr 1fr;
+    grid-gap: 20px;
+    // The height of each row is 250px
+    height: 500px;
+
+    .photo_1 {
+      background-image: url("../../images/Sushi/photo_1.JPG");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .photo_2 {
+      background-image: url("../../images/Sushi/photo_2.JPG");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .photo_3 {
+      background-image: url("../../images/Sushi/photo_3.JPG");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .photo_4 {
+      background-image: url("../../images/Sushi/photo_4.JPG");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .photo_5 {
+      background-image: url("../../images/Sushi/photo_5.JPG");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .photo_6 {
+      background-image: url("../../images/Sushi/photo_6.JPG");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+/*    iPad Screen   */
+@media (min-width: 501px) and (max-width: 780px) {
+  .section_2 {
+    padding: 0 5rem;
+
+    .photos {
+      height: 300px;
+      .photo_1 {
+        background-image: url("../../images/Sushi/photo_1.JPG");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .photo_2 {
+        background-image: url("../../images/Sushi/photo_2.JPG");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .photo_3 {
+        background-image: url("../../images/Sushi/photo_3.JPG");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .photo_4 {
+        background-image: url("../../images/Sushi/photo_4.JPG");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .photo_5 {
+        background-image: url("../../images/Sushi/photo_5.JPG");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .photo_6 {
+        background-image: url("../../images/Sushi/photo_6.JPG");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+/*    Mobile Screen   */
+@media (max-width: 500px) {
+  .section_2 {
+    padding: 0 3rem;
+
+    .category {
+      table-layout: fixed;
+      width: 100%;
+      font-size: 0.8rem;
+    }
+
+    .photos {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 5px;
+      width: 100%;
+      // The height of each row is 100px;
+      height: 300px;
+    }
+  }
+}
