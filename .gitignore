@@ -121,3 +121,4 @@ chrome-user-data
 *.swo
 server/public/.*
 client/src/assets/images/
+client/public/images/

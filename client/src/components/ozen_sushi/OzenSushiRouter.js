@@ -5,7 +5,7 @@ import Header from "../ozen_sushi/pages/Header";
 import About from "../ozen_sushi/pages/About";
 import Contact from "../ozen_sushi/pages/Contact";
 import Footer from "./pages/Footer";
-import Menu from "./pages/Menu";
+import Menu from "./pages/Menu/";
 
 class OzenSushiRouter extends Component {
   render() {
