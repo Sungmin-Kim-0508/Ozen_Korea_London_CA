@@ -16,19 +16,8 @@ class Footer extends PureComponent {
               <li className={style.li}>Contact Us</li>
             </ul>
           </section>
-          {/* Section 2 (Map, Location) */}
-          <section className={style.location}>
-            <div className={style.googleMap}>map</div>
-            <div className={style.address}>
-              <span className={style.pinpoint_img} />
-              <div>
-                <i className="fas fa-map-marker-alt" /> 103-541, Oxford St W,
-                London,
-              </div>
-              <div>ON N6H 0H9, CA</div>
-            </div>
-          </section>
-          {/* Section 3 (Opening Hours) */}
+
+          {/* Section 2 (Opening Hours) */}
           <section className={style.openingHours}>
             <div className={style.title}>Hours of Operation</div>
             <div className={style.daysOfWeek}>Mon. - Thur. :</div>
