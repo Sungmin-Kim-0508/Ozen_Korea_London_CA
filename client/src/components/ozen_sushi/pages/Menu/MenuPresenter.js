@@ -3,14 +3,22 @@ import style from "../../../../assets/styles/partial/ozen_sushi_menu.module.scss
 import { BrowserRouter as Router, Switch, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import MenuRouter from "./MenuRouter";
-
 import IconButton from "@material-ui/core/IconButton";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import Collapse from "@material-ui/core/Collapse";
 
 const MenuPresenter = props => {
-  const { checked, handleToggleCollapse, changeCheckedToFalse } = props;
+  const {
+    photoIndex,
+    checked,
+    isModalOpened,
+    handleToggleCollapse,
+    changeCheckedToFalse,
+    handleChangeMenuInfo,
+    handleOpenModal,
+    handleCloseModal
+  } = props;
   const arrowBtn = checked ? (
     <ArrowUpwardIcon fontSize="inherit" />
   ) : (
@@ -25,6 +33,7 @@ const MenuPresenter = props => {
           </Helmet>
           <section className={style.section_2}>
             <div className={style.title}>Menu</div>
+
             <div className={style.category}>
               {menuLinks.map((menu, index) => (
                 <Link key={index} to={menu.to} onClick={changeCheckedToFalse}>
@@ -35,7 +44,13 @@ const MenuPresenter = props => {
 
             <Collapse in={checked} collapsedHeight="300px">
               <div className={style.photos}>
-                <MenuRouter />
+                <MenuRouter
+                  photoIndex={photoIndex}
+                  handleOpenModal={handleOpenModal}
+                  isModalOpened={isModalOpened}
+                  handleCloseModal={handleCloseModal}
+                  handleChangeMenuInfo={handleChangeMenuInfo}
+                />
               </div>
             </Collapse>
           </section>
@@ -52,7 +67,7 @@ const baseUrl = "/ozen_sushi/menu";
 const menuLinks = [
   {
     name: "Appetizers",
-    to: `${baseUrl}/appetizers`
+    to: `${baseUrl}`
   },
   {
     name: "Roll Sets",

@@ -7,6 +7,8 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import styled from "styled-components";
+import MenuCarousel from "./MenuCarousel";
+import Modal from "@material-ui/core/Modal";
 import {
   appetizers,
   rollSets,
@@ -18,17 +20,233 @@ import {
   okonomiyakis
 } from "./MenuInfo";
 
-const MenuRouter = () => {
+const MenuRouter = ({
+  photoIndex,
+  handleOpenModal,
+  isModalOpened,
+  handleCloseModal
+}) => {
+  const baseUrl = "/ozen_sushi/menu";
+  const routes = [
+    {
+      path: `${baseUrl}`,
+      exact: true,
+      renderedImage: () => (
+        <>
+          {appetizers.map((appetizer, index) => (
+            <Image
+              key={appetizer.id}
+              imageUrl={appetizer.imageUrl}
+              id={index}
+              // append the event where modal is opened when clicked.
+              // handleOpenModal comes from MenuContainer.js
+              onClick={handleOpenModal}
+            />
+          ))}
+          <Modal
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            open={isModalOpened}
+            onClose={handleCloseModal}
+          >
+            <OzenStepperWrapper>
+              <MenuCarousel menuObj={appetizers} photoIndex={photoIndex} />
+            </OzenStepperWrapper>
+          </Modal>
+        </>
+      )
+    },
+    {
+      path: `${baseUrl}/roll_sets`,
+      renderedImage: () => (
+        <>
+          {rollSets.map((rollSet, index) => (
+            <Image
+              key={rollSet.id}
+              id={index}
+              imageUrl={rollSet.imageUrl}
+              onClick={handleOpenModal}
+            />
+          ))}
+          <Modal
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            open={isModalOpened}
+            onClose={handleCloseModal}
+          >
+            <OzenStepperWrapper>
+              <MenuCarousel menuObj={rollSets} photoIndex={photoIndex} />
+            </OzenStepperWrapper>
+          </Modal>
+        </>
+      )
+    },
+    {
+      path: `${baseUrl}/main_menu`,
+      renderedImage: () => (
+        <>
+          {mainMenu.map((item, index) => (
+            <Image
+              key={item.id}
+              id={index}
+              imageUrl={item.imageUrl}
+              onClick={handleOpenModal}
+            />
+          ))}
+          <Modal
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            open={isModalOpened}
+            onClose={handleCloseModal}
+          >
+            <OzenStepperWrapper>
+              <MenuCarousel menuObj={mainMenu} photoIndex={photoIndex} />
+            </OzenStepperWrapper>
+          </Modal>
+        </>
+      )
+    },
+    {
+      path: `${baseUrl}/sushi_or_sashimi_sets`,
+      renderedImage: () => (
+        <>
+          {sushiOrSashimiSets.map((item, index) => (
+            <Image
+              key={item.id}
+              id={index}
+              imageUrl={item.imageUrl}
+              onClick={handleOpenModal}
+            />
+          ))}
+          <Modal
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            open={isModalOpened}
+            onClose={handleCloseModal}
+          >
+            <OzenStepperWrapper>
+              <MenuCarousel
+                menuObj={sushiOrSashimiSets}
+                photoIndex={photoIndex}
+              />
+            </OzenStepperWrapper>
+          </Modal>
+        </>
+      )
+    },
+    {
+      path: `${baseUrl}/sashimi_and_sushi`,
+      renderedImage: () => (
+        <>
+          {sashimiAndSushi.map((item, index) => (
+            <Image
+              key={item.id}
+              id={index}
+              imageUrl={item.imageUrl}
+              onClick={handleOpenModal}
+            />
+          ))}
+          <Modal
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            open={isModalOpened}
+            onClose={handleCloseModal}
+          >
+            <OzenStepperWrapper>
+              <MenuCarousel menuObj={sashimiAndSushi} photoIndex={photoIndex} />
+            </OzenStepperWrapper>
+          </Modal>
+        </>
+      )
+    },
+    {
+      path: `${baseUrl}/rolls`,
+      renderedImage: () => (
+        <>
+          {rolls.map((item, index) => (
+            <Image
+              key={item.id}
+              id={index}
+              imageUrl={item.imageUrl}
+              onClick={handleOpenModal}
+            />
+          ))}
+          <Modal
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            open={isModalOpened}
+            onClose={handleCloseModal}
+          >
+            <OzenStepperWrapper>
+              <MenuCarousel menuObj={rolls} photoIndex={photoIndex} />
+            </OzenStepperWrapper>
+          </Modal>
+        </>
+      )
+    },
+    {
+      path: `${baseUrl}/udons`,
+      renderedImage: () => (
+        <>
+          {udons.map((item, index) => (
+            <Image
+              key={item.id}
+              id={index}
+              imageUrl={item.imageUrl}
+              onClick={handleOpenModal}
+            />
+          ))}
+          <Modal
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            open={isModalOpened}
+            onClose={handleCloseModal}
+          >
+            <OzenStepperWrapper>
+              <MenuCarousel menuObj={udons} photoIndex={photoIndex} />
+            </OzenStepperWrapper>
+          </Modal>
+        </>
+      )
+    },
+    {
+      path: `${baseUrl}/okonomiyakis`,
+      renderedImage: () => (
+        <>
+          {okonomiyakis.map((item, index) => (
+            <Image
+              key={item.id}
+              id={index}
+              imageUrl={item.imageUrl}
+              onClick={handleOpenModal}
+            />
+          ))}
+          <Modal
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            open={isModalOpened}
+            onClose={handleCloseModal}
+          >
+            <OzenStepperWrapper>
+              <MenuCarousel menuObj={okonomiyakis} photoIndex={photoIndex} />
+            </OzenStepperWrapper>
+          </Modal>
+        </>
+      )
+    }
+  ];
   return (
     <>
-      {routes.map((route, index) => (
-        <Route
-          key={index}
-          path={route.path}
-          exact={route.exact}
-          component={route.renderedImage}
-        />
-      ))}
+      {routes.map((route, index) => {
+        return (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component={route.renderedImage}
+          />
+        );
+      })}
     </>
   );
 };
@@ -39,66 +257,18 @@ const Image = styled.div`
   background-size: cover;
 `;
 
-const baseUrl = "/ozen_sushi/menu";
-const routes = [
-  {
-    path: `${baseUrl}`,
-    exact: true,
-    renderedImage: () =>
-      appetizers.map(appetizer => (
-        <Image key={appetizer.id} imageUrl={appetizer.imageUrl} />
-      ))
-  },
-  {
-    path: `${baseUrl}/appetizers`,
-    renderedImage: () =>
-      appetizers.map(appetizer => (
-        <Image key={appetizer.id} imageUrl={appetizer.imageUrl} />
-      ))
-  },
-  {
-    path: `${baseUrl}/roll_sets`,
-    renderedImage: () =>
-      rollSets.map(rollSet => (
-        <Image key={rollSet.id} imageUrl={rollSet.imageUrl} />
-      ))
-  },
-  {
-    path: `${baseUrl}/main_menu`,
-    renderedImage: () =>
-      mainMenu.map(item => <Image key={item.id} imageUrl={item.imageUrl} />)
-  },
-  {
-    path: `${baseUrl}/sushi_or_sashimi_sets`,
-    renderedImage: () =>
-      sushiOrSashimiSets.map(item => (
-        <Image key={item.id} imageUrl={item.imageUrl} />
-      ))
-  },
-  {
-    path: `${baseUrl}/sashimi_and_sushi`,
-    renderedImage: () =>
-      sashimiAndSushi.map(item => (
-        <Image key={item.id} imageUrl={item.imageUrl} />
-      ))
-  },
-  {
-    path: `${baseUrl}/rolls`,
-    renderedImage: () =>
-      rolls.map(roll => <Image key={roll.id} imageUrl={roll.imageUrl} />)
-  },
-  {
-    path: `${baseUrl}/udons`,
-    renderedImage: () =>
-      udons.map(udon => <Image key={udon.id} imageUrl={udon.imageUrl} />)
-  },
-  {
-    path: `${baseUrl}/okonomiyakis`,
-    renderedImage: () =>
-      okonomiyakis.map(okonomiyaki => (
-        <Image key={okonomiyaki.id} imageUrl={okonomiyaki.imageUrl} />
-      ))
+const OzenStepperWrapper = styled.div`
+  display: block;
+  margin: 5rem auto 8rem auto;
+  max-width: 450px;
+  height: 22rem;
+
+  color: white;
+
+  @media (max-width: 500px) {
+    margin: 4rem 1rem 3rem 1rem;
+    height: 18rem;
   }
-];
+`;
 
 export default MenuRouter;
