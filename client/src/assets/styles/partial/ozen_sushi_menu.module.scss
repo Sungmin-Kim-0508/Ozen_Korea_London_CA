@@ -27,10 +27,11 @@
       text-decoration: unset;
       color: black;
       padding: 0.5rem;
-    }
-    a:hover {
-      background-color: black;
-      color: #ebebeb;
+
+      &:hover {
+        background-color: black;
+        color: #ebebeb;
+      }
     }
   }
 
