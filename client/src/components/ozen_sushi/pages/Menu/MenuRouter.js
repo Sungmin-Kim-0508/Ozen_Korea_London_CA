@@ -17,7 +17,8 @@ import {
   sashimiAndSushi,
   rolls,
   udons,
-  okonomiyakis
+  okonomiyakis,
+  ozen_sushi_menu_board
 } from "./MenuInfo";
 
 const MenuRouter = ({
@@ -255,12 +256,13 @@ const Image = styled.div`
   background-image: url(${props => props.imageUrl});
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 17px 11px 28px -15px rgba(0, 0, 0, 0.45);
 `;
 
 const OzenStepperWrapper = styled.div`
   display: block;
   margin: 5rem auto 8rem auto;
-  max-width: 450px;
+  max-width: 600px;
   height: 22rem;
 
   color: white;

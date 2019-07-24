@@ -6,7 +6,8 @@ export default class extends Component {
   state = {
     photoIndex: 0,
     checked: false,
-    isModalOpened: false
+    isModalOpened: false,
+    isMenuModalOpened: false
   };
 
   handleToggleCollapse = () => {
@@ -35,26 +36,45 @@ export default class extends Component {
     });
   };
 
-  handleChangeMenuInfo = menuInfo => {
-    // selectedMenuInfo = menuInfo;
-    // console.log(selectedMenuInfo);
-    // this.setState({
-    //   selectedMenu: selectedMenuInfo
-    // })
+  handleOpenMenuModal = () => {
+    this.setState({
+      photoIndex: 0,
+      isMenuModalOpened: true
+    });
   };
 
+  handleCloseMenuModal = () => {
+    this.setState({
+      isMenuModalOpened: false
+    });
+  };
+
+  componentDidMount() {
+    // Scroll to top when move from Home to Menu
+    window.scrollTo(0, 0);
+  }
+
   render() {
-    const { photoIndex, checked, isModalOpened } = this.state;
+    const {
+      photoIndex,
+      checked,
+      isModalOpened,
+      isMenuModalOpened
+    } = this.state;
+
     return (
       <MenuPresenter
         photoIndex={photoIndex}
         checked={checked}
         isModalOpened={isModalOpened}
+        isMenuModalOpened={isMenuModalOpened}
         selectedMenuInfo={selectedMenuInfo}
         handleToggleCollapse={this.handleToggleCollapse}
         changeCheckedToFalse={this.changeCheckedToFalse}
         handleChangeMenuInfo={this.handleChangeMenuInfo}
         handleOpenModal={this.handleOpenModal}
+        handleOpenMenuModal={this.handleOpenMenuModal}
+        handleCloseMenuModal={this.handleCloseMenuModal}
         handleCloseModal={this.handleCloseModal}
       />
     );

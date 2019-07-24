@@ -1,4 +1,5 @@
 @import "./common_module.scss";
+@import "../variables";
 @import url("https://fonts.googleapis.com/css?family=Acme&display=swap");
 
 .footer {
@@ -25,6 +26,17 @@
       .navList__ul {
         list-style: initial;
         margin-left: 1.5rem;
+        max-width: 150px;
+        .navList__ul__li {
+          text-decoration: none;
+          color: black;
+          background-color: $ozen_sushi_yellow;
+
+          > li:hover {
+            background-color: $ozen_sushi_yellow;
+            transition-duration: 500ms;
+          }
+        }
       }
     }
     // Section 2 (Map, Locatiom)

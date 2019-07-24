@@ -1,4 +1,5 @@
 @import "./common_module.scss";
+@import "../variables";
 
 .section_1 {
   @include firstSectionBox(true);
@@ -13,6 +14,20 @@
   .title {
     font-size: 3rem;
     text-align: center;
+  }
+
+  .moreMenu {
+    display: grid;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 10px 4px 18px -5px rgba(0, 0, 0, 0.57);
+    cursor: pointer;
+
+    &:hover {
+      background-color: $ozen_sushi_yellow;
+      transition-duration: 500ms;
+      color: white;
+    }
   }
 
   .category {
@@ -30,6 +45,7 @@
 
       &:hover {
         background-color: black;
+        transition-duration: 900ms;
         color: #ebebeb;
       }
     }
@@ -60,6 +76,9 @@
   .section_2 {
     padding: 0 3rem;
 
+    .moreMenu {
+      font-size: 0.9rem;
+    }
     .title {
       font-size: 2rem;
     }

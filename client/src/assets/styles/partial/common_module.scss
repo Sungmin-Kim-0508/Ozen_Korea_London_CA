@@ -7,10 +7,11 @@
 
 @mixin firstSectionBox($isOpacity) {
   min-height: 400px;
-  background-image: url("https://imgcp.aacdn.jp/img-a/1200/900/global-aaj-front/article/2018/12/5c036dfae0936_5c036debf1871_107025549.jpeg");
+  background-image: url("../../images/Ozen_Sushi/Appetizer/Yakitori.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0% 80%;
+  background-position: 0% 60%;
+  box-shadow: 17px 21px 28px -15px rgba(0, 0, 0, 0.66);
   color: white;
   @if ($isOpacity) {
     opacity: 0.5;

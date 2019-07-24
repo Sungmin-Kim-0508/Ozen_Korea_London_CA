@@ -1,6 +1,6 @@
 import uuid from "uuid/v4";
 const baseUrl = `${process.env.PUBLIC_URL}/images/Ozen_Sushi`;
-
+const test = `${process.env.PUBLIC_URL}/images/Ozen_Korea/menu_board`;
 export const appetizers = [
   {
     id: uuid(),
@@ -244,5 +244,43 @@ export const okonomiyakis = [
     imageUrl: `${baseUrl}/Okonomiyaki/OkonomiYaki.JPG`,
     food_name: "OkonomiYaki",
     price: 14
+  }
+];
+
+export const ozen_sushi_menu_board = [
+  {
+    id: uuid(),
+    imageUrl: `${test}/1_Appetizer.jpg`,
+    name: "appetizer"
+  },
+  {
+    id: uuid(),
+    imageUrl: `${test}/2_Korean_Soup.jpg`,
+    name: "korean_soup"
+  },
+  {
+    id: uuid(),
+    imageUrl: `${test}/4_A_La_Carte.jpg`,
+    name: "lacarte"
+  },
+  {
+    id: uuid(),
+    imageUrl: `${test}/5_BBQ.jpg`,
+    name: "bbq"
+  },
+  {
+    id: uuid(),
+    imageUrl: `${test}/6_Hot_Pot.jpg`,
+    name: "hotpot"
+  },
+  {
+    id: uuid(),
+    imageUrl: `${test}/7_BBQ.jpg`,
+    name: "bbq"
+  },
+  {
+    id: uuid(),
+    imageUrl: `${test}/8_Beverage.jpg`,
+    name: "appetizer"
   }
 ];
