@@ -26,15 +26,15 @@
       .navList__ul {
         list-style: initial;
         margin-left: 1.5rem;
-        max-width: 150px;
+        max-width: 140px;
         .navList__ul__li {
           text-decoration: none;
           color: black;
-          background-color: $ozen_sushi_yellow;
+          background-color: $ozen_korea_red;
 
           > li:hover {
             border-radius: 5px;
-            background-color: $ozen_sushi_yellow;
+            background-color: $ozen_korea_red;
             transition-duration: 500ms;
           }
         }

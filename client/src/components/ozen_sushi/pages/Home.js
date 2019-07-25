@@ -39,10 +39,10 @@ class Home extends PureComponent {
             </span>
           </div>
           <div className={style.mid_first}>
-            <img src={avocado} />
+            <img src={avocado} alt="ozen sushi avocad" />
           </div>
           <div className={style.mid_second}>
-            <img src={ozen_sushi_img} />
+            <img src={ozen_sushi_img} alt="ozen sushi restaurant" />
           </div>
           <div className={style.bottom}>
             <NavLink className={style.bottom__link} to="ozen_sushi/about">
@@ -110,10 +110,10 @@ class Home extends PureComponent {
         {/* section 5 */}
         <section className={style.section_5}>
           <a href="https://www.skipthedishes.com/" className={style.uber_eats}>
-            <img src={skipdish} />
+            <img src={skipdish} alt="skip the dish logo" />
           </a>
           <a href="#" className={style.skip_the_dishes}>
-            <img src={uberEat} />
+            <img src={uberEat} alt="uber eat logo" />
           </a>
         </section>
       </div>

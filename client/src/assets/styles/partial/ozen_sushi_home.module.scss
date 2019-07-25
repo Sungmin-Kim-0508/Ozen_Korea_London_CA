@@ -10,7 +10,7 @@
 
 .section_1 {
   position: relative;
-  margin: 0 60px 0 60px;
+  margin: 0 40px 0 40px;
   @include firstSectionBox(false);
 
   .letters {
@@ -29,12 +29,12 @@
 .section_2 {
   display: grid;
   min-height: 400px;
-  margin: 20px 60px;
+  margin: 20px 40px;
 
   .section_2__img {
     width: 100%;
     height: 100%;
-    box-shadow: 17px 21px 28px -15px rgba(0, 0, 0, 0.66);
+    // box-shadow: 17px 21px 28px -15px rgba(0, 0, 0, 0.66);
   }
 }
 
@@ -219,16 +219,10 @@
         height: 10rem;
       }
     }
-
-    // .mid_second {
-    //   img {
-    //     height: 10rem;
-    //   }
-    // }
   }
 
   .section_4 {
-    .row {
+    .section_4__row {
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: 1fr;
       text-align: center;

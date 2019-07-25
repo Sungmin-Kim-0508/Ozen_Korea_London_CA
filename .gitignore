@@ -122,3 +122,4 @@ chrome-user-data
 server/public/.*
 client/src/assets/images/
 client/public/images/
+.env

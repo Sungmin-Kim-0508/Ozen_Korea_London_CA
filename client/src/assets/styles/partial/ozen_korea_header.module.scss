@@ -1,0 +1,135 @@
+@import "../variables";
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  .header__nav {
+    background-color: white;
+    .header__nav__logo_toggleBtn {
+      display: none;
+    }
+
+    #logoImage {
+      width: 10rem;
+      background-color: white;
+      border-radius: 1rem;
+    }
+
+    .header__nav__ul {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: center;
+      grid-gap: 30px;
+
+      text-align: center;
+      .header__nav__ul__li:not(.header__nav__ul__li_logoImage) {
+        margin-top: 20px;
+
+        &:hover {
+          border-bottom: 5px solid $ozen_korea_red;
+          transition-duration: 0.5s;
+        }
+
+        a {
+          text-decoration: none;
+          font-size: 2rem;
+          color: black;
+        }
+      }
+
+      .header__nav__ul__li#ozen_sushi {
+        margin-top: 50px;
+
+        &:hover {
+          border-bottom: 0;
+        }
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+/*      iPad        */
+@media (min-width: 501px) and (max-width: 770px) {
+  .header__nav {
+    .header__nav__logo_toggleBtn {
+      display: inline-block;
+      position: relative;
+
+      .header__nav__span_logo {
+        position: relative;
+        left: 4rem;
+        right: 0;
+        top: 2rem;
+        bottom: 0;
+      }
+      .header__nav__toggleBtn {
+        position: absolute;
+        left: 16.5rem;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        border: 0;
+        background: unset;
+
+        i {
+          color: black;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .header__nav__ul {
+      display: none;
+    }
+  }
+}
+
+/*      Mobile        */
+@media (max-width: 500px) {
+  .header {
+    .header__nav {
+      .header__nav__logo_toggleBtn {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+
+        .header__nav__toggleBtn {
+          width: 40px;
+          height: 40px;
+          margin-top: 15px;
+          border: 0;
+          background-color: unset;
+
+          i {
+            color: black;
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .header__nav__ul {
+        display: none;
+
+        .header__nav__ul__li:not(.header__nav__ul__li_logoImage) {
+          margin-top: 10px;
+
+          a {
+            font-size: 1.5rem;
+          }
+        }
+
+        .header__nav__ul__li_logoImage {
+          display: none;
+        }
+
+        .header__nav__ul__li#ozen_sushi {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

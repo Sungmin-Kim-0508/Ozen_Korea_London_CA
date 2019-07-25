@@ -17,8 +17,7 @@ import {
   sashimiAndSushi,
   rolls,
   udons,
-  okonomiyakis,
-  ozen_sushi_menu_board
+  okonomiyakis
 } from "./MenuInfo";
 
 const MenuRouter = ({

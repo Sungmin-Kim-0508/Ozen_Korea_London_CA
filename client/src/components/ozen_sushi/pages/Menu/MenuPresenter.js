@@ -81,22 +81,22 @@ const MenuPresenter = props => {
         open={isMenuModalOpened}
         onClose={handleCloseMenuModal}
       >
-        <OzenStepperWrapper>
+        <OzenMenuBoardStepperWrapper>
           <MenuCarousel
             menuObj={ozen_sushi_menu_board}
             photoIndex={photoIndex}
           />
-        </OzenStepperWrapper>
+        </OzenMenuBoardStepperWrapper>
       </Modal>
     </>
   );
 };
 
-const OzenStepperWrapper = styled.div`
+const OzenMenuBoardStepperWrapper = styled.div`
   display: block;
-  margin: 5rem auto 8rem auto;
+  margin: 3rem auto 8rem auto;
   max-width: 600px;
-  height: 22rem;
+  height: 36rem;
 
   color: white;
 
