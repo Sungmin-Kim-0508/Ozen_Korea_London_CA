@@ -1,6 +1,6 @@
 @import "./reset.scss";
 @import url("https://fonts.googleapis.com/css?family=Acme&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap");
 html {
   box-sizing: border-box;
   font-family: "Acme", sans-serif;
@@ -21,4 +21,12 @@ img {
 
 .font_roboto {
   font-family: "Roboto", sans-serif;
+}
+
+.font_ubuntu {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.font_acme {
+  font-family: "Acme", sans-serif;
 }

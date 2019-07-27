@@ -12,6 +12,7 @@ class OzenSushiRouter extends Component {
     const {
       url: { url }
     } = this.props;
+    console.log(url);
     return (
       <>
         <Switch>

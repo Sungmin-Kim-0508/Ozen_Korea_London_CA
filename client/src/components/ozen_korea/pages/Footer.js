@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../../../assets/styles/partial/ozen_sushi_footer.module.scss";
+import style from "../../../assets/styles/partial/ozen_korea_footer.module.scss";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
       <div className={style.information}>
         {/* Section 1 (Navigation List) */}
         <section className={style.navList}>
-          <span className={style.OZen}>O"Zen</span>
+          <span className={style.OZen}>O"Zen Korea</span>
           <ul className={`${style.navList__ul} font_roboto`}>
             {NavigationList.map((item, index) => (
               <NavLink key={index} className={item.className} to={item.to}>
@@ -39,23 +39,23 @@ const Footer = () => {
 const NavigationList = [
   {
     className: style.navList__ul__li,
-    to: "/ozen_sushi",
+    to: "/ozen_korea",
     navName: "Home"
   },
   {
     className: style.navList__ul__li,
-    to: "/ozen_sushi/about",
+    to: "/ozen_korea/about",
 
     navName: "About Us"
   },
   {
     className: style.navList__ul__li,
-    to: "/ozen_sushi/menu",
+    to: "/ozen_korea/menu",
     navName: "Menu"
   },
   {
     className: style.navList__ul__li,
-    to: "/ozen_sushi/contact",
+    to: "/ozen_korea/contact",
     navName: "Contact Us"
   }
 ];
