@@ -249,7 +249,11 @@
       .section_4__row {
         grid-template-rows: repeat(2, 0.5fr);
         grid-template-columns: 1fr;
-        text-align: center;
+        .section_4__row__menuDetail {
+          a > * {
+            text-align: center;
+          }
+        }
       }
     }
   }

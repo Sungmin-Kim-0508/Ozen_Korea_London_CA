@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <div className={style.container}>
       <Helmet>
-        <title>Contact Us | Ozen Sushi </title>
+        <title>Contact Us | Ozen Korea </title>
       </Helmet>
       {/* <section className={style.section_1} /> */}
       <section className={style.section_2}>
