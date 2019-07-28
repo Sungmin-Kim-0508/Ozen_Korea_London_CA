@@ -1,28 +1,32 @@
-import React, { Component, Fragment } from "react";
-import { NavLink } from "react-router-dom";
+import React, { PureComponent, Fragment, Component } from "react";
+import { Helmet } from "react-helmet";
 import style from "../assets/styles/partial/initPage.module.scss";
-import 'bootstrap/dist/css/bootstrap.css';
 
 class InitPage extends Component {
   render() {
     return (
       <Fragment>
-        <div className={style.container_initPage}>
 
-          <div>
+        <body>
+          <section className={style.container_initPage}>
+
             <div className={style.leftside}>
-              Ozen Sushi
-            </div>
-          </div>
+              <article>
+                <h1>Ozen Sushi</h1><a className={style.ozenSushi_button}>Enter</a>
+              </article>
 
-          <div>
+            </div>
+
             <div className={style.rightside}>
-              Ozen Korea
-            </div>
-          </div>
+              <article>
+                <h1>Ozen Korea</h1><a className={style.ozenSushi_button}>Enter</a>
+              </article>
 
-        </div>
+            </div>
+          </section>
+        </body>
       </Fragment>
+
     );
   }
 }
