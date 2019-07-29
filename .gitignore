@@ -120,3 +120,6 @@ chrome-user-data
 *.swp
 *.swo
 server/public/.*
+client/src/assets/images/
+client/public/images/
+.env

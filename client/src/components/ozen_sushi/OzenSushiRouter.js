@@ -5,12 +5,14 @@ import Header from "../ozen_sushi/pages/Header";
 import About from "../ozen_sushi/pages/About";
 import Contact from "../ozen_sushi/pages/Contact";
 import Footer from "./pages/Footer";
+import Menu from "./pages/Menu/";
 
 class OzenSushiRouter extends Component {
   render() {
     const {
       url: { url }
     } = this.props;
+    console.log(url);
     return (
       <>
         <Switch>
@@ -18,8 +20,9 @@ class OzenSushiRouter extends Component {
             <Header ozen_sushi={url} />
             <Route exact path={url} component={Home} />
             <Route path={`${url}/about`} component={About} />
+            <Route path={`${url}/menu`} component={Menu} />
             <Route path={`${url}/contact`} component={Contact} />
-            {/* <Footer /> */}
+            <Footer />
           </Router>
         </Switch>
       </>

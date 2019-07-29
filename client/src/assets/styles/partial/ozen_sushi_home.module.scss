@@ -10,6 +10,7 @@
 
 .section_1 {
   position: relative;
+  margin: 0 40px 0 40px;
   @include firstSectionBox(false);
 
   .letters {
@@ -19,7 +20,7 @@
     margin-right: 3rem;
     font-size: 4rem;
     span {
-      color: #debe07;
+      color: $ozen_sushi_yellow;
     }
   }
 }
@@ -28,8 +29,13 @@
 .section_2 {
   display: grid;
   min-height: 400px;
-  background-color: cadetblue;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 20px 40px;
+
+  .section_2__img {
+    width: 100%;
+    height: 100%;
+    // box-shadow: 17px 21px 28px -15px rgba(0, 0, 0, 0.66);
+  }
 }
 
 .section_3 {
@@ -57,12 +63,16 @@
   .mid_first {
     grid-area: mid_first;
     img {
-      max-height: 15rem;
+      width: 100%;
+      height: 30rem;
     }
   }
 
   .mid_second {
     grid-area: mid_second;
+    img {
+      height: 30rem;
+    }
   }
 
   .bottom {
@@ -70,12 +80,25 @@
     position: relative;
     min-height: 200px;
     background-color: $black;
-    color: $white;
 
     display: grid;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
+
+    .bottom__link {
+      color: $white;
+      text-decoration: unset;
+    }
+
+    &:hover {
+      background-color: $ozen_sushi_yellow;
+      transition-duration: 500ms;
+
+      .bottom__link {
+        color: white;
+      }
+    }
   }
 }
 
@@ -83,16 +106,15 @@
   display: grid;
   grid-gap: 30px;
 
-  .top {
+  .section_4__top {
     font-size: 4rem;
     text-align: center;
   }
 
-  .row {
+  .section_4__row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    min-height: 200px;
-    background-color: $black;
+    min-height: 300px;
     color: $white;
 
     .right_justify {
@@ -100,24 +122,44 @@
       text-align: right;
     }
 
-    .menu {
+    .section_4__row__menu {
       display: grid;
+      background-color: $black;
       padding: 2rem 3rem;
-      .menu__name {
-        font-size: 2.5rem;
+      &:hover {
+        background-color: $ozen_sushi_yellow;
+        transition-duration: 500ms;
+
+        .menu__price {
+          color: black;
+        }
       }
-      .menu__detail {
-        font-size: 1.5rem;
-      }
-      .menu__price {
-        color: #debe07;
-        font-size: 2rem;
-        position: relative;
+
+      a {
+        display: grid;
+        text-decoration: unset;
+        color: white;
+        .menu__name {
+          font-size: 2.5rem;
+        }
+        .menu__detail {
+          font-size: 1.5rem;
+        }
+        .menu__price {
+          color: $ozen_sushi_yellow;
+          font-size: 2rem;
+          position: relative;
+        }
       }
     }
 
-    .menu_photo {
-      background-color: #debe07;
+    .section_4__row__menu_photo {
+      display: grid;
+      background-color: $ozen_sushi_yellow;
+      img {
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 }
@@ -132,16 +174,23 @@
 /*  Smart Phone   */
 @media (max-width: 500px) {
   .section_1 {
+    margin: 0;
+    min-height: 15rem;
     .letters {
       position: absolute;
       bottom: 0;
       right: 0;
       margin-right: 10px;
-      font-size: 3rem;
+      font-size: 2rem;
       span {
-        color: #debe07;
+        color: $ozen_sushi_yellow;
       }
     }
+  }
+
+  .section_2 {
+    margin: 0;
+    min-height: 15rem;
   }
 
   .section_3 {
@@ -153,28 +202,30 @@
       "mid_second"
       "bottom";
 
+    padding: 10px;
+
     .top {
       .OZen {
         font-size: 2.5rem;
       }
       .korean_japanese {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
     }
 
+    .mid_first,
     .mid_second {
       img {
-        min-height: 200px;
+        height: 10rem;
       }
     }
   }
 
   .section_4 {
-    .row {
+    .section_4__row {
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: 1fr;
       text-align: center;
-
       .right_justify {
         text-align: center;
       }

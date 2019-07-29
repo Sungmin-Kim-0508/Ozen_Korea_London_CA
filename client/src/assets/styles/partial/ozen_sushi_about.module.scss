@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import "./common_module.scss";
+
+.container {
+  display: grid;
+  grid-gap: 50px;
+
+  .section_1 {
+    position: relative;
+    @include firstSectionBox(true);
+  }
+
+  .section_2 {
+    background-color: #ebebeb;
+    padding: 0 5rem;
+
+    .wrapper {
+      display: grid;
+      height: 60rem;
+      padding: 0 15rem;
+      padding-bottom: 20px;
+      grid-template-rows: 120px 5fr 3fr;
+      grid-gap: 20px;
+      background-color: white;
+
+      .title {
+        .OZen {
+          font-size: 6rem;
+        }
+        .korean_japanese {
+          font-size: 3rem;
+        }
+      }
+
+      .photo {
+        background-image: url("../../images/about_ozen_sushi.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+      }
+
+      .paragraphs {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    .section_2 {
+      display: grid;
+      padding: 2rem;
+      .wrapper {
+        padding: 0;
+        display: grid;
+        height: 40rem;
+
+        grid-template-rows: 6rem 1fr 3fr;
+
+        .title {
+          padding: 0 1rem;
+          .OZen {
+            display: inline-block;
+
+            font-size: 3rem;
+          }
+          .korean_japanese {
+            display: inline-block;
+            font-size: 1.5rem;
+          }
+        }
+
+        .photo {
+          background-size: cover;
+          width: 100%;
+        }
+
+        .paragraphs {
+          padding: 0 1rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,77 +1,103 @@
 @import url("https://fonts.googleapis.com/css?family=Acme&display=swap");
 @import "../variables";
 
-ul.header__nav__ul {
-  display: grid;
-  padding: 10px;
-  grid-auto-flow: column;
-  min-height: 45px;
-  justify-content: center;
-  grid-gap: 20px;
-  // text-transform: uppercase;
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 2;
   background-color: $black;
+  padding: 10px;
+  min-height: 35px;
 
-  .ozen_sushi_logo {
-    max-height: 45px;
-  }
-
-  > li > a {
-    display: block;
-    text-decoration: none;
-    color: $white;
-    font-size: 2rem;
-  }
-
-  > li > a:hover {
-    background-color: $white;
-    color: $black;
+  .menuToggleBtn {
+    display: none;
   }
 }
 
+ul.header__nav__ul {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  justify-content: center;
+
+  > li {
+    margin: 4px;
+
+    a {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      color: #d6d6d6;
+      font-size: 2rem;
+
+      .ozen_sushi_logo {
+        max-height: 60px;
+      }
+    }
+
+    a.ozen_korea {
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+  }
+
+  > li > a:hover {
+    height: 100%;
+    border-bottom: 3px solid $ozen_sushi_yellow;
+    transition-duration: 0.4s;
+  }
+
+  > li > #logo:hover {
+    border-bottom: 0;
+  }
+  > li > a.ozen_korea:hover {
+    border-bottom: 0;
+  }
+}
+
+// iPad
 @media (min-width: 501px) and (max-width: 770px) {
   .ozen_sushi_logo {
     display: none;
   }
 
   ul.header__nav__ul > li > a {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
+// Mobile
 @media (max-width: 500px) {
+  nav {
+    .menuToggleBtn {
+      display: block;
+      margin: 0 auto;
+      background: unset;
+      width: 1.8rem;
+      height: 1.8rem;
+
+      border: 1px solid #ebebeb;
+      border-radius: 5px;
+      i {
+        color: white;
+      }
+    }
+  }
   ul.header__nav__ul {
     display: grid;
     grid-auto-flow: row;
     grid-gap: 10px;
   }
 
+  ul.header__nav__ul > li:not(.logo) {
+    // Hide <li> tag by default
+    display: none;
+  }
+
   ul.header__nav__ul > li > a {
     font-size: 1rem;
   }
+  ul.header__nav__ul > li > a.ozen_korea {
+    margin-top: 0;
+  }
 }
-
-// ul.header__nav__ul {
-//   display: grid;
-//   justify-content: center;
-//   grid-auto-flow: column;
-//   justify-content: space-evenly;
-//   background-color: black;
-//   font-family: "Acme", sans-serif;
-//   font-size: 1.7rem;
-//   > li {
-//     width: 10vw;
-//     height: 7vh;
-//     margin-top: 20px;
-//     .container_sushi_header__ul__li__a {
-//       text-decoration: none;
-//       color: white;
-//     }
-//   }
-
-//   > .ozen_sushi_logo {
-//     background-image: url("../../images/Ozen_sushi_Logo.jpg");
-//     background-repeat: no-repeat;
-//     background-size: contain;
-//     margin-top: 10px;
-//   }
-// }
