@@ -47,11 +47,11 @@ class MenuCarousel extends Component {
     );
     const menuNameAndPrice =
       menuObj[activeStep].food_name === undefined ? null : (
-        <Ozen_Paper square elevation={0}>
+        <OzenPaper square elevation={0}>
           <span className="menu_name">{menuObj[activeStep].food_name}</span>
           <br />
           <span className="price">$ {menuObj[activeStep].price}</span>
-        </Ozen_Paper>
+        </OzenPaper>
       );
     return (
       <>
@@ -83,7 +83,7 @@ const OzenStepperImage = styled.img`
   }
 `;
 
-const Ozen_Paper = styled(Paper)`
+const OzenPaper = styled(Paper)`
   text-align: center;
   font-size: 1.5rem;
   background-color: black;
