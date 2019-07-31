@@ -1,4 +1,10 @@
 import React from "react";
+import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
+import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
+import Collapse from "@material-ui/core/Collapse";
+import IconButton from "@material-ui/core/IconButton";
+import MenuCarousel from "./MenuCarousel";
+import MenuRouter from "./MenuRouter";
 import style from "../../../../assets/styles/partial/ozen_sushi_menu.module.scss";
 import styled from "styled-components";
 import {
@@ -8,13 +14,7 @@ import {
   withRouter
 } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import MenuRouter from "./MenuRouter";
-import IconButton from "@material-ui/core/IconButton";
-import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
-import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
-import Collapse from "@material-ui/core/Collapse";
 import { Modal } from "@material-ui/core";
-import MenuCarousel from "./MenuCarousel";
 import { ozen_sushi_menu_board } from "./MenuInfo";
 
 const MenuPresenter = props => {
@@ -44,10 +44,10 @@ const MenuPresenter = props => {
           <Helmet>
             <title>Menu | Ozen Sushi</title>
           </Helmet>
-          <section className={style.section_2}>
+          <section className={style.section_1}>
             <div className={style.title}>Menu</div>
             <div className={style.moreMenu} onClick={handleOpenMenuModal}>
-              <span className="font_roboto">See more menu</span>
+              <span className="font_roboto">See More Menu</span>
             </div>
             <div className={style.category}>
               {menuLinks.map((menu, index) => (
@@ -94,10 +94,10 @@ const MenuPresenter = props => {
 
 const OzenMenuBoardStepperWrapper = styled.div`
   display: block;
-  margin: 3rem auto 8rem auto;
+  margin: 10px auto 8rem auto;
   max-width: 600px;
-  height: 36rem;
-
+  height: 37rem;
+  overflow-y: auto;
   color: white;
 
   @media (max-width: 500px) {

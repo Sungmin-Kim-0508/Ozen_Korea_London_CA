@@ -1,32 +1,23 @@
-import React, { PureComponent, Fragment, Component } from "react";
-import { Helmet } from "react-helmet";
+import React, { PureComponent } from "react";
 import style from "../assets/styles/partial/initPage.module.scss";
+import { Link } from "react-router-dom";
 
-class InitPage extends Component {
+class InitPage extends PureComponent {
   render() {
     return (
-      <Fragment>
+      <section className={style.container_initPage}>
+        <Link to="/ozen_sushi">
+          <div className={style.leftside}>
+            <h1>Ozen Sushi</h1>
+          </div>
+        </Link>
 
-        <body>
-          <section className={style.container_initPage}>
-
-            <div className={style.leftside}>
-              <article>
-                <h1>Ozen Sushi</h1><a className={style.ozenSushi_button}>Enter</a>
-              </article>
-
-            </div>
-
-            <div className={style.rightside}>
-              <article>
-                <h1>Ozen Korea</h1><a className={style.ozenSushi_button}>Enter</a>
-              </article>
-
-            </div>
-          </section>
-        </body>
-      </Fragment>
-
+        <Link to="/ozen_korea">
+          <div className={style.rightside}>
+            <h1>Ozen Korea</h1>
+          </div>
+        </Link>
+      </section>
     );
   }
 }

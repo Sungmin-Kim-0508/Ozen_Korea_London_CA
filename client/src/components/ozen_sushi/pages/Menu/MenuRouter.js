@@ -256,6 +256,7 @@ const Image = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 17px 11px 28px -15px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
 `;
 
 const OzenStepperWrapper = styled.div`

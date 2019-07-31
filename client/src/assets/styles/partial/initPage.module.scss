@@ -1,35 +1,40 @@
 // Do not use dash(-). Instead, use underscore(_)
 @import url("https://fonts.googleapis.com/css?family=Pacifico|Rock+Salt");
 
-section {
-  height: 100%;
-}
-body {
-  color: #fff;
-  text-align: center;
-
-  height: 100%;
-}
-
 .container_initPage {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
+
+// Make the fonts align center
+.leftside,
+.rightside {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
 .leftside {
   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(255, 255, 225, 0.1)),
     url(../../images/Ozen_sushi_Logo.jpg);
   background-size: cover;
   background-position: center;
-  flex: 1;
   padding: 1rem;
   transition: all 0.2s ease-in-out; // Animation
+  height: 100%;
+
+  &:hover {
+    transform: scale(0.95);
+  }
   h1 {
     font-family: "Rock Salt", cursive;
     font-size: 6rem;
   }
-}
-// Animation
-.leftside:hover {
-  transform: scale(0.95);
 }
 
 .rightside {
@@ -40,32 +45,29 @@ body {
   flex: 1;
   padding: 1rem;
   transition: all 0.2s ease-in-out; // Animation
+  height: 100%;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+
   h1 {
     font-family: "Pacifico", cursive;
     font-size: 6rem;
   }
 }
-// Animation
-.rightside:hover {
-  transform: scale(0.95);
-}
-.ozenSushi_button {
-  border-radius: 30px;
-  color: #ffff;
-  background-color: #fcad26;
-  padding: 1.5%;
-  margin: 0 2%;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s;
-  width: 150px;
-}
-// Animation
-.ozenSushi_button:hover {
-  background: #fcc567;
-  color: #fff;
+
+@media (max-width: 500px) {
+  .container_initPage {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    .leftside,
+    .rightside {
+      &:hover {
+        transform: none;
+      }
+    }
+  }
 }
