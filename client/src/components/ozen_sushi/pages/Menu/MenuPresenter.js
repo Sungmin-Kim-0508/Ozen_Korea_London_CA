@@ -7,6 +7,9 @@ import MenuCarousel from "./MenuCarousel";
 import MenuRouter from "./MenuRouter";
 import style from "../../../../assets/styles/partial/ozen_sushi_menu.module.scss";
 import styled from "styled-components";
+import skipdish from "../../../../assets/images/skip_06.png";
+import uberEat from "../../../../assets/images/uber-eats_03.png";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -45,7 +48,23 @@ const MenuPresenter = props => {
             <title>Menu | Ozen Sushi</title>
           </Helmet>
           <section className={style.section_1}>
-            <div className={style.title}>Menu</div>
+            <div className={style.title_deliver_logo}>
+              <div className={style.title}>Menu</div>
+              <div className={style.logo}>
+                <a
+                  href="https://www.skipthedishes.com/ozen?gclid=Cj0KCQjwvo_qBRDQARIsAE-bsH-IXy9dfLLlAq1bITr4rkKr5uMg8-t6Yht2oDMwb6OUyF_l9GgL1NMaAgvFEALw_wcB"
+                  className={style.skip_the_dishes}
+                >
+                  <img src={skipdish} alt="skip the dish logo" />
+                </a>
+                <a
+                  href="https://www.ubereats.com/en-CA/london-ont/food-delivery/ozen-sushi/yCgRS0Q7S_Wlx8Flww4rWQ/"
+                  className={style.uber_eats}
+                >
+                  <img src={uberEat} alt="uber eat logo" />
+                </a>
+              </div>
+            </div>
             <div className={style.moreMenu} onClick={handleOpenMenuModal}>
               <span className="font_roboto">See More Menu</span>
             </div>
@@ -85,6 +104,7 @@ const MenuPresenter = props => {
           <MenuCarousel
             menuObj={ozen_sushi_menu_board}
             photoIndex={photoIndex}
+            mobileViewHeight={70}
           />
         </OzenMenuBoardStepperWrapper>
       </Modal>
@@ -102,7 +122,7 @@ const OzenMenuBoardStepperWrapper = styled.div`
 
   @media (max-width: 500px) {
     margin: 4rem 1rem 3rem 1rem;
-    height: 33rem;
+    height: auto;
   }
 `;
 

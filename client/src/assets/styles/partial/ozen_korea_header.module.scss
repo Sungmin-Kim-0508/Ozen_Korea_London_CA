@@ -7,7 +7,7 @@
     background-color: white;
     border-bottom: #ed4c67 5px solid;
 
-    .header__nav__logo_toggleBtn {
+    .header__nav__ul_mobile {
       display: none;
     }
 
@@ -109,27 +109,59 @@
 @media (max-width: 500px) {
   .header {
     .header__nav {
-      .header__nav__logo_toggleBtn {
+      ul.header__nav__ul {
+        display: none;
+      }
+      .header__nav__ul_mobile {
         display: grid;
-        grid-auto-flow: column;
-        justify-content: space-between;
+        grid-auto-flow: row;
+        grid-gap: 10px;
 
-        .header__nav__toggleBtn {
-          width: 40px;
-          height: 40px;
-          margin-top: 15px;
-          border: 0;
-          background-color: unset;
+        .header__nav__ul_mobile__logo_toggleBtn {
+          display: grid;
+          grid-auto-flow: column;
+          justify-content: space-between;
 
-          i {
-            color: black;
-            font-size: 1.5rem;
+          .header__nav__ul_mobile__logo_toggleBtn_toggleBtn {
+            width: 50px;
+            height: 50px;
+            margin-top: 15px;
+            background-color: unset;
+
+            border: #ed4c67 2px solid;
+            border-radius: 5px;
+
+            i {
+              color: black;
+              font-size: 1.5rem;
+            }
+          }
+        }
+
+        .header__nav__mobile_listItems {
+          display: none;
+          text-align: center;
+          justify-content: center;
+          grid-gap: 10px;
+
+          li {
+            width: 120px;
+
+            a {
+              color: black;
+              font-size: 1.2rem;
+            }
+          }
+          li#ozen_sushi {
+            a {
+              font-size: 0.9rem;
+            }
           }
         }
       }
 
       .header__nav__ul {
-        display: none;
+        display: grid;
         grid-auto-flow: row;
         justify-content: center;
         grid-gap: 5px;

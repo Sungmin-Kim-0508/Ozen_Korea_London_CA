@@ -23,7 +23,7 @@ class MenuCarousel extends Component {
   };
   render() {
     const { activeStep } = this.state;
-    const { menuObj } = this.props;
+    const { menuObj, mobileViewHeight } = this.props;
     const maxStep = menuObj.length;
     const nextBtn = (
       <Button
@@ -59,6 +59,7 @@ class MenuCarousel extends Component {
         <OzenStepperImage
           src={menuObj[activeStep].imageUrl}
           alt={menuObj[activeStep].food_name}
+          mobileViewHeight={mobileViewHeight}
         />
 
         <MobileStepper
@@ -79,7 +80,7 @@ const OzenStepperImage = styled.img`
   height: 100%;
 
   @media (max-width: 500px) {
-    height: 25rem;
+    height: ${props => props.mobileViewHeight + "vh"};
   }
 `;
 

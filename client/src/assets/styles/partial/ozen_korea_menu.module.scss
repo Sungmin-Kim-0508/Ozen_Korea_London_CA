@@ -14,6 +14,9 @@
   .moreMenu {
     display: grid;
     text-align: center;
+    align-content: center;
+    height: 6vh;
+    background-color: #ced6e0;
     font-size: 1.5rem;
     cursor: pointer;
     box-shadow: 10px 4px 18px -5px rgba(0, 0, 0, 0.57);

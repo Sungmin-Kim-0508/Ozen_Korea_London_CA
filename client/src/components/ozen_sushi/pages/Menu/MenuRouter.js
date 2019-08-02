@@ -75,7 +75,11 @@ const MenuRouter = ({
             onClose={handleCloseModal}
           >
             <OzenStepperWrapper>
-              <MenuCarousel menuObj={rollSets} photoIndex={photoIndex} />
+              <MenuCarousel
+                menuObj={rollSets}
+                photoIndex={photoIndex}
+                mobileViewHeight={50}
+              />
             </OzenStepperWrapper>
           </Modal>
         </>

@@ -111,7 +111,7 @@ class Home extends PureComponent {
             <img src={skipdish} alt="skip the dish logo" />
           </a>
           <a
-            href="https://www.ubereats.com/en-CA/?utm_source=AdWords_Brand&utm_campaign=search-google-brand_32_-99_ca-national_e_txt_acq_cpc_en-ca_uber%20eats_aud-295840112290:kwd-125079392186_255771863478_52415632997_e_c&cid=1075422390&adg_id=52415632997&fi_id=&match=e&net=g&dev=c&dev_m=&cre=255771863478&kwid=aud-295840112290:kwd-125079392186&kw=uber%20eats&placement=&tar=&gclid=CjwKCAjw-ITqBRB7EiwAZ1c5U6chVa5jfvEZ-JfZzAqapbxsQGj58iEl-nZTadtgXLwgqW2zNxEFbBoCR9gQAvD_BwE&gclsrc=aw.ds"
+            href="https://www.ubereats.com/en-CA/london-ont/food-delivery/ozen-korea/5oGey9g1ReaVDU3C01bf6g/?utm_campaign=search-google-brand_32_-99_ca-national_e_txt_acq_cpc_en-ca_uber%20eats_aud-295840112290%3Akwd-125079392186_255771863478_52415632997_e_c&utm_source=AdWords_Brand"
             className={style.uber_eats}
           >
             <img src={uberEat} alt="uber eat logo" />

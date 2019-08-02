@@ -6,42 +6,42 @@ export const appetizers = [
     id: uuid(),
     imageUrl: `${baseUrl}/Appetizer/Agedashi_Tofu.JPG`,
     food_name: "Agedashi Tofu",
-    price: 11
+    price: 6.45
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Appetizer/Chicken_Karahi.jpg`,
-    food_name: "Chicken Karahi",
-    price: 9
+    food_name: "Chicken Karahi Yaki",
+    price: 8.45
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Appetizer/Edamame.JPG`,
     food_name: "Edamame",
-    price: 4
+    price: 4.45
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Appetizer/Gyoza.JPG`,
     food_name: "Gyoza",
-    price: 8
+    price: 5.45
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Appetizer/Gyoza_Soup.JPG`,
     food_name: "Gyoza Soup",
-    price: 8
+    price: 4.45
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Appetizer/OYSTER1.jpg`,
-    food_name: "Oyester1",
+    food_name: "Oyster1",
     price: 8
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Appetizer/OYSTERSHOOTER2.jpg`,
-    food_name: "Oyester2",
+    food_name: "Oyster Shooter",
     price: 8
   },
   {
@@ -53,44 +53,38 @@ export const appetizers = [
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Appetizer/Sashimi_Ceveiche.JPG`,
-    food_name: "Sashimi_Ceveiche",
-    price: 8
+    food_name: "Sashimi Ceveiche",
+    price: 9.45
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Appetizer/Shirimp_Karahi.jpg`,
     food_name: "Shirimp Karahi",
-    price: 8
+    price: 9.45
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Appetizer/Shirimp_Tempura.JPG`,
     food_name: "Shirimp Tempura",
-    price: 8
+    price: 8.45
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Appetizer/Sunomono_Salad.JPG`,
-    food_name: "Sunomono Salad",
-    price: 8
+    food_name: "Snomono Salad",
+    price: 6.99
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Appetizer/Sushi_Pizza.jpg`,
-    food_name: "Sushi Pizza",
-    price: 8
-  },
-  {
-    id: uuid(),
-    imageUrl: `${baseUrl}/Appetizer/Yakitori_2.jpg`,
-    food_name: "Yakitori",
-    price: 8
+    food_name: "Tuna and Fish Eggs Sushi Pizza",
+    price: 9.45
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Appetizer/Yakitori.jpeg`,
     food_name: "Yakitori",
-    price: 8
+    price: 5.45
   }
 ];
 
@@ -104,14 +98,14 @@ export const mainMenu = [
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Main/Bulgogi.jpg`,
-    food_name: "Bulgogi",
-    price: 10
+    food_name: "Bulgogi Combo",
+    price: 13.95
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Main/Pork_Katsu.jpg`,
-    food_name: "Pork Katsu",
-    price: 10
+    food_name: "Pork Katsu Combo",
+    price: 13.95
   },
   {
     id: uuid(),
@@ -125,20 +119,20 @@ export const rolls = [
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Roll/Ozen_roll.jpg`,
-    food_name: "Ozen Roll",
-    price: 10
+    food_name: "O Zen Roll",
+    price: 15
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Roll/Revolution_roll.jpg`,
     food_name: "Revolution roll",
-    price: 10
+    price: 14
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Roll/Rocket_Roll_1.JPG`,
     food_name: "Rocket Roll 1",
-    price: 10
+    price: 13
   }
 ];
 
@@ -162,25 +156,25 @@ export const sashimiAndSushi = [
     id: uuid(),
     imageUrl: `${baseUrl}/SashimiAndSushi/Salmon_Sashimi.jpg`,
     food_name: "Salmon Sashimi",
-    price: 10
+    price: 5
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/SashimiAndSushi/Salmon_Sushi.JPG`,
     food_name: "Salmon Sushi",
-    price: 8
+    price: 4.5
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/SashimiAndSushi/Tuna_Sashimi.JPG`,
     food_name: "Tuna Sashimi",
-    price: 100
+    price: 6
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/SashimiAndSushi/Tuna_Sushi.JPG`,
     food_name: "Tuna Sushi",
-    price: 14
+    price: 5
   }
 ];
 
@@ -188,8 +182,8 @@ export const sushiOrSashimiSets = [
   {
     id: uuid(),
     imageUrl: `${baseUrl}/SushiOrSashimi_Set/Chirashi_Set.jpg`,
-    food_name: "Chirashi Set",
-    price: 14
+    food_name: "Chirashi Sushi Set",
+    price: 18
   },
   {
     id: uuid(),
@@ -216,19 +210,19 @@ export const udons = [
     id: uuid(),
     imageUrl: `${baseUrl}/Udon/Seafood_Udon.jpg`,
     food_name: "Seafood Udon",
-    price: 14
+    price: 11.5
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Udon/Seafood_Yaki_Udon.jpg`,
     food_name: "Seafood Yaki Udon",
-    price: 14
+    price: 12.5
   },
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Udon/Spicy_Seafood_Udon.jpg`,
     food_name: "Spicy Seafood Udon",
-    price: 14
+    price: 11.95
   }
 ];
 
@@ -242,8 +236,8 @@ export const okonomiyakis = [
   {
     id: uuid(),
     imageUrl: `${baseUrl}/Okonomiyaki/OkonomiYaki.JPG`,
-    food_name: "OkonomiYaki",
-    price: 14
+    food_name: "Seafood Okonomi Yaki",
+    price: 14.95
   }
 ];
 

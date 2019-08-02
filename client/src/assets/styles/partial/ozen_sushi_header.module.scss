@@ -99,7 +99,8 @@ nav {
           height: 50px;
           width: 50px;
           margin-top: 20px;
-          border: $ozen_sushi_yellow 1px solid;
+          border: $ozen_sushi_yellow 2px solid;
+          border-radius: 5px;
 
           > i {
             text-align: center;

@@ -110,13 +110,13 @@ class Home extends PureComponent {
         {/* section 5 */}
         <section className={style.section_5}>
           <a
-            href="https://www.skipthedishes.com/"
+            href="https://www.skipthedishes.com/ozen?gclid=Cj0KCQjwvo_qBRDQARIsAE-bsH-IXy9dfLLlAq1bITr4rkKr5uMg8-t6Yht2oDMwb6OUyF_l9GgL1NMaAgvFEALw_wcB"
             className={style.skip_the_dishes}
           >
             <img src={skipdish} alt="skip the dish logo" />
           </a>
           <a
-            href="https://www.ubereats.com/en-CA/?utm_source=AdWords_Brand&utm_campaign=search-google-brand_32_-99_ca-national_e_txt_acq_cpc_en-ca_uber%20eats_aud-295840112290:kwd-125079392186_255771863478_52415632997_e_c&cid=1075422390&adg_id=52415632997&fi_id=&match=e&net=g&dev=c&dev_m=&cre=255771863478&kwid=aud-295840112290:kwd-125079392186&kw=uber%20eats&placement=&tar=&gclid=CjwKCAjw-ITqBRB7EiwAZ1c5U6chVa5jfvEZ-JfZzAqapbxsQGj58iEl-nZTadtgXLwgqW2zNxEFbBoCR9gQAvD_BwE&gclsrc=aw.ds"
+            href="https://www.ubereats.com/en-CA/london-ont/food-delivery/ozen-sushi/yCgRS0Q7S_Wlx8Flww4rWQ/"
             className={style.uber_eats}
           >
             <img src={uberEat} alt="uber eat logo" />
