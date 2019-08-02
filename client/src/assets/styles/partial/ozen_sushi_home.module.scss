@@ -229,6 +229,19 @@
       .right_justify {
         text-align: center;
       }
+
+      .section_4__row__menu {
+        a {
+          .menu__name {
+            font-size: 1.5rem;
+          }
+
+          .menu__detail,
+          .menu__price {
+            font-size: 1rem;
+          }
+        }
+      }
     }
   }
 

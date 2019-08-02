@@ -9,50 +9,52 @@ nav {
   padding: 10px;
   min-height: 35px;
 
-  .menuToggleBtn {
-    display: none;
-  }
-}
+  /*        Desktop         */
 
-ul.header__nav__ul {
-  display: grid;
-  grid-auto-flow: column;
-  grid-gap: 20px;
-  justify-content: center;
+  ul.header__nav__ul {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+    justify-content: center;
 
-  > li {
-    margin: 4px;
+    > li {
+      margin: 4px;
 
-    a {
-      display: block;
-      text-decoration: none;
-      text-align: center;
-      color: #d6d6d6;
-      font-size: 2rem;
+      a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: #d6d6d6;
+        font-size: 2rem;
 
-      .ozen_sushi_logo {
-        height: 60px;
-        width: 100px;
+        .ozen_sushi_logo {
+          height: 60px;
+          width: 100px;
+        }
+      }
+
+      a.ozen_korea {
+        font-size: 1rem;
+        margin-top: 2rem;
       }
     }
 
-    a.ozen_korea {
-      font-size: 1rem;
-      margin-top: 2rem;
+    > li > a:hover {
+      height: 100%;
+      border-bottom: 3px solid $ozen_sushi_yellow;
+      transition-duration: 0.4s;
+    }
+
+    > li > #logo:hover {
+      border-bottom: 0;
+    }
+    > li > a.ozen_korea:hover {
+      border-bottom: 0;
     }
   }
 
-  > li > a:hover {
-    height: 100%;
-    border-bottom: 3px solid $ozen_sushi_yellow;
-    transition-duration: 0.4s;
-  }
-
-  > li > #logo:hover {
-    border-bottom: 0;
-  }
-  > li > a.ozen_korea:hover {
-    border-bottom: 0;
+  ul.header__nav__ul_mobile {
+    display: none;
   }
 }
 
@@ -67,38 +69,64 @@ ul.header__nav__ul {
   }
 }
 
-// Mobile
+/*      Mobile     */
 @media (max-width: 500px) {
   nav {
-    .menuToggleBtn {
-      display: block;
-      margin: 0 auto;
-      background: unset;
-      width: 1.8rem;
-      height: 1.8rem;
+    border-bottom: $ozen_sushi_yellow solid 5px;
+    ul.header__nav__ul {
+      display: none;
+    }
+    ul.header__nav__ul_mobile {
+      display: grid;
 
-      border: 1px solid #ebebeb;
-      border-radius: 5px;
-      i {
-        color: white;
+      // Logo and Toogle Button
+      .header__nav__ul_mobile__logo_toggleBtn {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+
+        .header__nav__ul_mobile__logo_toggleBtn__logo {
+          > img {
+            max-height: 80px;
+            width: 130px;
+          }
+        }
+
+        .header__nav__ul_mobile__logo_toggleBtn__toggleBtn {
+          display: grid;
+          background: unset;
+          color: white;
+          height: 50px;
+          width: 50px;
+          margin-top: 20px;
+          border: $ozen_sushi_yellow 1px solid;
+
+          > i {
+            text-align: center;
+          }
+        }
+      }
+
+      // List Items
+      .header__nav__ul_mobile__li {
+        display: none;
+        justify-content: center;
+        grid-gap: 10px;
+
+        li {
+          width: 100px;
+          text-align: center;
+
+          a {
+            color: white;
+            font-size: 1.2rem;
+          }
+
+          a.ozen_korea {
+            font-size: 0.8rem;
+          }
+        }
       }
     }
-  }
-  ul.header__nav__ul {
-    display: grid;
-    grid-auto-flow: row;
-    grid-gap: 10px;
-  }
-
-  ul.header__nav__ul > li:not(.logo) {
-    // Hide <li> tag by default
-    display: none;
-  }
-
-  ul.header__nav__ul > li > a {
-    font-size: 1rem;
-  }
-  ul.header__nav__ul > li > a.ozen_korea {
-    margin-top: 0;
   }
 }

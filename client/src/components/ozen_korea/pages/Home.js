@@ -58,7 +58,7 @@ class Home extends PureComponent {
           <div className={style.section_4__top}>Menu</div>
           <div className={style.section_4__row}>
             <div className={style.section_4__row__menu_photo}>
-              <img src={`${imageUrl}/pork_bone_soup.png`} alt="" />
+              <img src={`${imageUrl}/jap_chae.png`} alt="" />
             </div>
             <div className={style.section_4__row__menuDetail}>
               <NavLink to={`${ozen_korea}`}>
@@ -82,14 +82,14 @@ class Home extends PureComponent {
             </div>
             <div className={style.section_4__row__menu_photo}>
               <img
-                src={`${imageUrl}/jap_chae.png`}
+                src={`${imageUrl}/kimchi_pancake.png`}
                 alt="ozen, Ozen, ozen korea, Ozen Korea, Ozen korea , ozen kimch, kimchi, kimchi pancake, Kimchi Pancake, ozen korea kimchi pancake, 오젠, 오젠 코리아, 오젠코리아,  오젠 코리아 김치전, 오젠코리아 김치부침개, 김치전, 김치 부침개"
               />
             </div>
           </div>
           <div className={style.section_4__row}>
             <div className={style.section_4__row__menu_photo}>
-              <img src={`${imageUrl}/kimchi_pancake.png`} alt="" />
+              <img src={`${imageUrl}/pork_bone_soup.png`} alt="" />
             </div>
             <div className={style.section_4__row__menuDetail}>
               <NavLink to={`${ozen_korea}`}>

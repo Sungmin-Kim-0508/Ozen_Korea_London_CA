@@ -22,7 +22,7 @@
       height: 60px;
       top: 45%;
 
-      background-color: white;
+      background-color: #dff9fb;
       font-size: 3rem;
       color: black;
       text-align: center;
@@ -34,7 +34,8 @@
     grid-template-areas:
       "entrance_img photo_1"
       "entrance_img about_us"
-      "entrance_img photo_2";
+      "entrance_img photo_2"
+      "footer footer";
 
     grid-gap: 30px;
 
@@ -233,6 +234,15 @@
         "photo_2";
       grid-template-rows: repeat(auto-fit, 200px);
 
+      .entrance_img {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        img {
+          max-width: 15rem;
+        }
+      }
+
       .about_us {
         height: 200px;
         a {
@@ -249,11 +259,29 @@
       .section_4__row {
         grid-template-rows: repeat(2, 0.5fr);
         grid-template-columns: 1fr;
-        .section_4__row__menuDetail {
-          a > * {
-            text-align: center;
+        .section_4__row__menuDetail:nth-child(odd),
+        .section_4__row__menuDetail:nth-child(even) {
+          a {
+            * {
+              text-align: center;
+            }
+
+            .menu__name {
+              font-size: 1.5rem;
+            }
+
+            .menu__description,
+            .menu__price {
+              font-size: 1rem;
+            }
           }
         }
+      }
+    }
+
+    .section_5 {
+      > a > img {
+        max-width: 100px;
       }
     }
   }

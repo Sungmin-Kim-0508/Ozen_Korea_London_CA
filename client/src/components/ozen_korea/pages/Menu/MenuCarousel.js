@@ -79,7 +79,7 @@ const OzenStepperImage = styled.img`
   height: 100%;
 
   @media (max-width: 500px) {
-    height: 100%;
+    height: 25rem;
   }
 `;
 

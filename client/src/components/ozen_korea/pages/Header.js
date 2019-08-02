@@ -11,15 +11,21 @@ const Header = ({ ozen_korea }) => {
   const toggleMenu = () => {
     let menuList = document.querySelector("header > nav > ul");
 
-    if (menuList.style.display === "block") {
+    if (menuList.style.display === "grid") {
       menuList.style.display = "none";
     } else {
-      menuList.style.display = "block";
+      menuList.style.display = "grid";
     }
+  };
+
+  const foldMenu = () => {
+    let menuList = document.querySelector("header > nav > ul");
+    menuList.style.display = "none";
   };
 
   return (
     <header className={style.header}>
+      {window.scrollTo(0, 0)}
       <nav className={style.header__nav}>
         <div className={style.header__nav__logo_toggleBtn}>
           {/* Logo */}
@@ -42,21 +48,29 @@ const Header = ({ ozen_korea }) => {
               style.header__nav__ul__li_logoImage
             } logoImage`}
           >
-            <Link to={ozen_korea}>
+            <Link to={ozen_korea} onClick={foldMenu}>
               <img src={logoImageUrl} alt="ozen korea" id={style.logoImage} />
             </Link>
           </li>
           <li className={style.header__nav__ul__li}>
-            <Link to={ozen_korea}>Home</Link>
+            <Link to={ozen_korea} onClick={foldMenu}>
+              Home
+            </Link>
           </li>
           <li className={style.header__nav__ul__li}>
-            <Link to={`${ozen_korea}/about`}>About</Link>
+            <Link to={`${ozen_korea}/about`} onClick={foldMenu}>
+              About
+            </Link>
           </li>
           <li className={style.header__nav__ul__li}>
-            <Link to={`${ozen_korea}/menu`}>Menu</Link>
+            <Link to={`${ozen_korea}/menu`} onClick={foldMenu}>
+              Menu
+            </Link>
           </li>
           <li className={style.header__nav__ul__li}>
-            <Link to={`${ozen_korea}/contact`}>Contact Us</Link>
+            <Link to={`${ozen_korea}/contact`} onClick={foldMenu}>
+              Contact Us
+            </Link>
           </li>
           <li className={style.header__nav__ul__li} id={style.ozen_sushi}>
             <a href="/ozen_sushi">Go to Ozen Sushi</a>

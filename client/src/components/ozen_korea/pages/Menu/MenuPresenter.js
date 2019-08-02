@@ -50,7 +50,7 @@ const OzenMenuBoardStepperWrapper = styled.div`
 
   @media (max-width: 500px) {
     margin: 4rem 1rem 3rem 1rem;
-    height: 18rem;
+    height: 30rem;
   }
 `;
 

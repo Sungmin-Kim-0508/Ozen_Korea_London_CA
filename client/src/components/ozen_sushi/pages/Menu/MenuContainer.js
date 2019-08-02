@@ -49,11 +49,6 @@ export default class extends Component {
     });
   };
 
-  componentDidMount() {
-    // Scroll to top when move from Home to Menu
-    window.scrollTo(0, 0);
-  }
-
   render() {
     const {
       photoIndex,

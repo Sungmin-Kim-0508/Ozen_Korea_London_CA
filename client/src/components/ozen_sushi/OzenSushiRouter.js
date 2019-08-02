@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from "../ozen_sushi/pages/Header";
+import Header from "./pages/Header/Header";
 import About from "../ozen_sushi/pages/About";
 import Contact from "../ozen_sushi/pages/Contact";
 import Footer from "./pages/Footer";
