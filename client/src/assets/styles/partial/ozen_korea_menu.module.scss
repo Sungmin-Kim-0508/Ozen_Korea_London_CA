@@ -3,29 +3,12 @@
 
 .section_1 {
   display: grid;
-  padding: 0 10rem;
+  padding: 0 5rem;
   grid-gap: 20px;
 
   .title {
     font-size: 3rem;
     text-align: center;
-  }
-
-  .moreMenu {
-    display: grid;
-    text-align: center;
-    align-content: center;
-    height: 6vh;
-    background-color: #ced6e0;
-    font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: 10px 4px 18px -5px rgba(0, 0, 0, 0.57);
-
-    &:hover {
-      background-color: $ozen_korea_red;
-      transition-duration: 500ms;
-      color: white;
-    }
   }
 
   .category {

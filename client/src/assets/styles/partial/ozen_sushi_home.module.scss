@@ -219,9 +219,16 @@
         height: 10rem;
       }
     }
+
+    .bottom {
+      display: none;
+    }
   }
 
   .section_4 {
+    .section_4__top {
+      font-size: 2rem;
+    }
     .section_4__row {
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: 1fr;

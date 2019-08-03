@@ -20,15 +20,10 @@ class MenuContainer extends Component {
     });
   };
   render() {
-    const { photoIndex, isMenuModalOpened } = this.state;
+    const { photoIndex } = this.state;
     return (
       <div>
-        <MenuPresenter
-          photoIndex={photoIndex}
-          isMenuModalOpened={isMenuModalOpened}
-          handleOpenMenuModal={this.handleOpenMenuModal}
-          handleCloseMenuModal={this.handleCloseMenuModal}
-        />
+        <MenuPresenter photoIndex={photoIndex} />
       </div>
     );
   }

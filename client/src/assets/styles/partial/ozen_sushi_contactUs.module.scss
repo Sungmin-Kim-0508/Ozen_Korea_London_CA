@@ -3,6 +3,7 @@
 .container {
   display: grid;
   grid-gap: 50px;
+  margin-bottom: 18rem;
 
   .section_1 {
     @include firstSectionBox(true);

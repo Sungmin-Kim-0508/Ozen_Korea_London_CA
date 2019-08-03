@@ -27,7 +27,7 @@ const Header = ({ ozen_korea }) => {
   };
 
   return (
-    <header className={style.header}>
+    <header id="navbar" className={style.header}>
       {window.scrollTo(0, 0)}
       <nav className={style.header__nav}>
         {/*       Mobile       */}
