@@ -14,6 +14,7 @@
     .title {
       font-size: 3rem;
       text-align: center;
+      align-content: center;
       grid-column: 2 / 3;
     }
 
@@ -29,9 +30,9 @@
   }
 
   .moreMenu {
-    display: grid;
     text-align: center;
     align-content: center;
+    margin-top: 20px;
     height: 6vh;
     background-color: #ced6e0;
     font-size: 1.5rem;
@@ -92,16 +93,26 @@
     padding: 0 3rem;
 
     .moreMenu {
-      font-size: 0.9rem;
+      display: grid;
+      align-content: center;
+      padding: 0 auto;
+      font-size: 1rem;
     }
 
     .title_deliver_logo {
       .title {
+        margin-top: 10px;
         font-size: 2rem;
       }
 
       .logo {
-        display: none;
+        display: grid;
+        grid-auto-flow: column;
+
+        a > img {
+          width: 40px;
+          height: 40px;
+        }
       }
     }
 

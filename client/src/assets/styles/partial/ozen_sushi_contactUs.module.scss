@@ -3,40 +3,43 @@
 .container {
   display: grid;
   grid-gap: 50px;
-  margin-bottom: 18rem;
-
-  .section_1 {
-    @include firstSectionBox(true);
-  }
-
+  padding: 20px 100px;
   .section_2 {
     display: grid;
-    grid-gap: 20px;
-    grid-template-rows: 2.5rem 2rem 2fr;
+    margin: 0 auto;
+    grid-gap: 30px;
     text-align: center;
-    padding: 0 10rem;
+    width: 25rem;
 
     .title {
       font-size: 2.8rem;
     }
 
-    .phone_number {
-      background-color: #ebebeb;
-      font-size: 1.5rem;
-    }
-
-    .location {
-      .googleMap {
-        display: inline-block;
-        padding-left: auto;
-        padding-right: auto;
-        width: 23rem;
+    .info {
+      display: grid;
+      grid-gap: 40px;
+      margin-bottom: 80px;
+      .phone_number {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        background-color: #ebebeb;
+        font-size: 1.5rem;
       }
-      .address {
-        div {
-          display: block;
-          font-size: 1.3rem;
-          overflow: hidden;
+
+      .location {
+        .googleMap {
+          display: inline-block;
+          padding-left: auto;
+          padding-right: auto;
+          width: 100%;
+        }
+        .address {
+          div {
+            display: block;
+            font-size: 1.3rem;
+            overflow: hidden;
+          }
         }
       }
     }
@@ -46,21 +49,24 @@
 @media (max-width: 500px) {
   .container {
     grid-gap: 20px;
+    margin-bottom: 150px;
+    padding: 0 5px;
+
     .section_2 {
       padding: 0 3rem;
-
       .title {
         font-size: 2rem;
       }
+      .info {
+        .phone_number {
+          font-size: 1rem;
+        }
 
-      .phone_number {
-        font-size: 1rem;
-      }
-
-      .location {
-        .googleMap {
-          width: 100%;
-          height: 12rem;
+        .location {
+          .googleMap {
+            width: 100%;
+            height: 7rem;
+          }
         }
       }
     }

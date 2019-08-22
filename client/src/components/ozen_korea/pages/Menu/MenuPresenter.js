@@ -27,12 +27,12 @@ const OzenKoreaMenuPresenter = ({ photoIndex }) => {
 
 const OzenMenuBoardStepperWrapper = styled.div`
   display: block;
-  margin: 10px auto 1rem auto;
+  margin: 0 auto 1rem auto;
   max-width: 500px;
   height: 40rem;
   overflow-y: auto;
   color: white;
-
+  box-shadow: 2px 3px 25px 4px rgba(0, 0, 0, 0.46);
   > img {
     height: 35rem;
   }

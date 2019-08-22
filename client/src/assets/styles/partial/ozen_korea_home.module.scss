@@ -245,17 +245,13 @@
 
       .about_us {
         display: none;
-        // height: 200px;
-        // a {
-        //   font-size: 2rem;
-        // }
       }
     }
 
     .section_4 {
       grid-template-rows: repeat(auto-fit, 1fr);
       .section_4__top {
-        font-size: 2rem;
+        font-size: 3rem;
       }
       .section_4__row {
         grid-template-rows: repeat(2, 0.5fr);

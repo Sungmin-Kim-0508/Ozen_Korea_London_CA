@@ -1,0 +1,78 @@
+@import "../../../../assets/styles/variables.scss";
+.section_4__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 300px;
+  color: $white;
+
+  .right_justify {
+    justify-content: right;
+    text-align: right;
+  }
+
+  .section_4__row__menu {
+    display: grid;
+    background-color: $black;
+    padding: 3rem;
+    &:hover {
+      background-color: $ozen_sushi_yellow;
+      transition-duration: 500ms;
+
+      .menu__price {
+        color: black;
+      }
+    }
+
+    a {
+      display: grid;
+      text-decoration: unset;
+      color: white;
+      .menu__name {
+        font-size: 2.5rem;
+      }
+      .menu__detail {
+        font-size: 1.5rem;
+      }
+      .menu__price {
+        color: $ozen_sushi_yellow;
+        font-size: 2rem;
+        position: relative;
+      }
+    }
+  }
+
+  .section_4__row__menu_photo {
+    display: grid;
+    background-color: $ozen_sushi_yellow;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .section_4__row {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    .section_4__row__menu_photo {
+      > img {
+        height: 220px;
+      }
+    }
+
+    .section_4__row__menu {
+      text-align: center;
+      a {
+        .menu__name {
+          font-size: 1.5rem;
+        }
+
+        .menu__detail,
+        .menu__price {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

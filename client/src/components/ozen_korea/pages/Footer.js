@@ -21,12 +21,10 @@ const Footer = () => {
         {/* Section 2 (Opening Hours) */}
         <section className={style.openingHours}>
           <div className={style.title}>Opening Hours</div>
-          <div className={style.daysOfWeek}>Mon. - Thur. :</div>
-          <div className={style.operationTime}>12 p.m - 9 p.m</div>
-          <div className={style.daysOfWeek}>Fri. - Sat. : </div>
-          <div className={style.operationTime}>12 p.m - 9 p.m</div>
-          <div className={style.daysOfWeek}>Sun. : </div>
-          <div className={style.operationTime}>12 p.m - 9 p.m</div>
+          <div className={style.daysOfWeek}>Mon - Sat</div>
+          <div className={style.operationTime}>11:30 AM - 10 PM</div>
+          <div className={style.daysOfWeek}>Sun</div>
+          <div className={style.operationTime}>11:30 AM - 9:30 PM</div>
         </section>
       </div>
       <div className={`${style.copyRight} font_roboto`}>

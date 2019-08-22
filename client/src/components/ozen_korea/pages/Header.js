@@ -55,11 +55,11 @@ const Header = ({ ozen_korea }) => {
                 Home
               </Link>
             </li>
-            <li className={style.header__nav__ul__li}>
+            {/* <li className={style.header__nav__ul__li}>
               <Link to={`${ozen_korea}/about`} onClick={foldMenu}>
                 About
               </Link>
-            </li>
+            </li> */}
             <li className={style.header__nav__ul__li}>
               <Link to={`${ozen_korea}/menu`} onClick={foldMenu}>
                 Menu
@@ -91,9 +91,9 @@ const Header = ({ ozen_korea }) => {
           <li className={style.header__nav__ul__li}>
             <Link to={ozen_korea}>Home</Link>
           </li>
-          <li className={style.header__nav__ul__li}>
+          {/* <li className={style.header__nav__ul__li}>
             <Link to={`${ozen_korea}/about`}>About</Link>
-          </li>
+          </li> */}
           <li className={style.header__nav__ul__li}>
             <Link to={`${ozen_korea}/menu`}>Menu</Link>
           </li>

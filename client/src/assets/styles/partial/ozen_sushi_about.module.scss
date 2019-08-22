@@ -17,18 +17,18 @@
     .wrapper {
       display: grid;
       height: 60rem;
-      padding: 0 15rem;
+      padding: 0 10rem;
       padding-bottom: 20px;
-      grid-template-rows: 120px 5fr 3fr;
+      grid-template-rows: 80px 5fr 3fr;
       grid-gap: 20px;
       background-color: white;
 
       .title {
         .OZen {
-          font-size: 6rem;
+          font-size: 4rem;
         }
         .korean_japanese {
-          font-size: 3rem;
+          font-size: 2rem;
         }
       }
 
@@ -41,6 +41,16 @@
 
       .paragraphs {
         font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 501px) and (max-width: 780px) {
+  .container {
+    .section_2 {
+      .wrapper {
+        padding: 0 5rem;
       }
     }
   }

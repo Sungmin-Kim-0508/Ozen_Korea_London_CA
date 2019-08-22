@@ -9,6 +9,7 @@ import style from "../../../../assets/styles/partial/ozen_sushi_menu.module.scss
 import styled from "styled-components";
 import skipdish from "../../../../assets/images/skip_06.png";
 import uberEat from "../../../../assets/images/uber-eats_03.png";
+import { routes } from "../../../routes";
 
 import {
   BrowserRouter as Router,
@@ -65,9 +66,9 @@ const MenuPresenter = props => {
                 </a>
               </div>
             </div>
-            <div className={style.moreMenu} onClick={handleOpenMenuModal}>
+            {/* <div className={style.moreMenu} onClick={handleOpenMenuModal}>
               <span className="font_roboto">See More Menu</span>
-            </div>
+            </div> */}
             <div className={style.category}>
               {menuLinks.map((menu, index) => (
                 <Link key={index} to={menu.to} onClick={changeCheckedToFalse}>
@@ -76,7 +77,7 @@ const MenuPresenter = props => {
               ))}
             </div>
 
-            <Collapse in={checked} collapsedHeight="300px">
+            <Collapse in={checked} collapsedHeight="150px">
               <div className={style.photos}>
                 <MenuRouter
                   photoIndex={photoIndex}
@@ -85,6 +86,9 @@ const MenuPresenter = props => {
                   handleCloseModal={handleCloseModal}
                   handleChangeMenuInfo={handleChangeMenuInfo}
                 />
+              </div>
+              <div className={style.moreMenu} onClick={handleOpenMenuModal}>
+                <span className="font_roboto">See More Menu</span>
               </div>
             </Collapse>
           </section>
@@ -126,7 +130,7 @@ const OzenMenuBoardStepperWrapper = styled.div`
   }
 `;
 
-const baseUrl = "/ozen_sushi/menu";
+const baseUrl = `${routes.ozen_sushi_root}${routes.menu}`;
 const menuLinks = [
   {
     name: "Appetizers",

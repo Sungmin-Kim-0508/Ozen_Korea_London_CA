@@ -5,7 +5,7 @@
 
 .container {
   display: grid;
-  grid-gap: 50px;
+  grid-gap: 110px;
 }
 
 .section_1 {
@@ -111,56 +111,9 @@
     text-align: center;
   }
 
-  .section_4__row {
+  .section_4__rows {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    min-height: 300px;
-    color: $white;
-
-    .right_justify {
-      justify-content: right;
-      text-align: right;
-    }
-
-    .section_4__row__menu {
-      display: grid;
-      background-color: $black;
-      padding: 2rem 3rem;
-      &:hover {
-        background-color: $ozen_sushi_yellow;
-        transition-duration: 500ms;
-
-        .menu__price {
-          color: black;
-        }
-      }
-
-      a {
-        display: grid;
-        text-decoration: unset;
-        color: white;
-        .menu__name {
-          font-size: 2.5rem;
-        }
-        .menu__detail {
-          font-size: 1.5rem;
-        }
-        .menu__price {
-          color: $ozen_sushi_yellow;
-          font-size: 2rem;
-          position: relative;
-        }
-      }
-    }
-
-    .section_4__row__menu_photo {
-      display: grid;
-      background-color: $ozen_sushi_yellow;
-      img {
-        height: 100%;
-        width: 100%;
-      }
-    }
+    grid-gap: 30px;
   }
 }
 
@@ -169,10 +122,15 @@
   grid-auto-flow: column;
   justify-content: center;
   grid-gap: 20px;
+  margin-bottom: 110px;
 }
 
 /*  Smart Phone   */
 @media (max-width: 500px) {
+  $shouldBeSame: 50px;
+  .container {
+    grid-gap: $shouldBeSame;
+  }
   .section_1 {
     margin: 0;
     min-height: 15rem;
@@ -189,8 +147,9 @@
   }
 
   .section_2 {
-    margin: 0;
-    min-height: 15rem;
+    display: none;
+    // margin: 0;
+    // min-height: 15rem;
   }
 
   .section_3 {
@@ -213,10 +172,16 @@
       }
     }
 
-    .mid_first,
+    .mid_first {
+      display: none;
+    }
+
     .mid_second {
+      display: grid;
+      justify-content: center;
       img {
         height: 10rem;
+        max-width: 300px;
       }
     }
 
@@ -226,33 +191,15 @@
   }
 
   .section_4 {
+    grid-template-rows: repeat(auto-fit, 1fr);
     .section_4__top {
-      font-size: 2rem;
-    }
-    .section_4__row {
-      grid-template-rows: repeat(2, 1fr);
-      grid-template-columns: 1fr;
-      text-align: center;
-      .right_justify {
-        text-align: center;
-      }
-
-      .section_4__row__menu {
-        a {
-          .menu__name {
-            font-size: 1.5rem;
-          }
-
-          .menu__detail,
-          .menu__price {
-            font-size: 1rem;
-          }
-        }
-      }
+      font-size: 3rem;
     }
   }
 
   .section_5 {
+    margin-bottom: $shouldBeSame;
+
     > a > img {
       max-width: 100px;
     }

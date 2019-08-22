@@ -3,6 +3,7 @@ import { NavLink, withRouter } from "react-router-dom";
 import style from "../../../../assets/styles/partial/ozen_sushi_header.module.scss";
 import styled from "styled-components";
 import logo from "../../../../assets/images/Ozen_sushi_Logo.jpg";
+import { routes } from "../../../routes";
 
 const Item = styled.li`
   border-bottom: 3px solid
@@ -40,7 +41,7 @@ const Header = ({ ozen_sushi, location: { pathname } }) => {
         <div className={style.header__nav__ul_mobile__logo_toggleBtn}>
           <NavLink
             id={style.logo}
-            to={ozen_sushi}
+            to={`${routes.ozen_sushi_root}${routes.home}`}
             className={style.header__nav__ul_mobile__logo_toggleBtn__logo}
             onClick={foldMenu}
           >
@@ -55,55 +56,53 @@ const Header = ({ ozen_sushi, location: { pathname } }) => {
           </button>
         </div>
         <div id="listItem" className={style.header__nav__ul_mobile__li}>
-          <Item current={pathname === `${ozen_sushi}`} className={style.home}>
+          <Item
+            current={pathname === `${routes.ozen_sushi_root}${routes.home}`}
+            className={style.home}
+          >
             <NavLink
               className={style.container_sushi_header__ul__li__a}
-              to={ozen_sushi}
+              to={`${routes.ozen_sushi_root}${routes.home}`}
               onClick={foldMenu}
             >
               Home
             </NavLink>
           </Item>
           <Item
-            current={pathname === `${ozen_sushi}/about`}
+            current={pathname === `${routes.ozen_sushi_root}${routes.about}`}
             className={style.about}
           >
             <NavLink
               className={style.container_sushi_header__ul__li__a}
-              to={`${ozen_sushi}/about`}
+              to={`${routes.ozen_sushi_root}${routes.about}`}
               onClick={foldMenu}
             >
               About
             </NavLink>
           </Item>
           <Item
-            current={pathname === `${ozen_sushi}/menu`}
+            current={pathname === `${routes.ozen_sushi_root}${routes.menu}`}
             className={style.menu}
           >
             <NavLink
               className={style.container_sushi_header__ul__li__a}
-              to={`${ozen_sushi}/menu`}
+              to={`${routes.ozen_sushi_root}${routes.menu}`}
               onClick={foldMenu}
             >
               Menu
             </NavLink>
           </Item>
           <Item
-            current={pathname === `${ozen_sushi}/contact`}
+            current={pathname === `${routes.ozen_sushi_root}${routes.contact}`}
             className={style.contact_us}
           >
             <NavLink
               className={style.container_sushi_header__ul__li__a}
-              to={`${ozen_sushi}/contact`}
+              to={`${routes.ozen_sushi_root}${routes.contact}`}
               onClick={foldMenu}
             >
               Contact Us
             </NavLink>
-          </Item>
-          <Item>
-            <a className={style.ozen_korea} href={`/ozen_korea`}>
-              Go to Ozen Korea
-            </a>
           </Item>
         </div>
       </ul>
@@ -111,7 +110,10 @@ const Header = ({ ozen_sushi, location: { pathname } }) => {
       {/*      Desktop      */}
       <ul className={style.header__nav__ul}>
         <Item id="logo" className={style.logo}>
-          <NavLink id={style.logo} to={ozen_sushi}>
+          <NavLink
+            id={style.logo}
+            to={`${routes.ozen_sushi_root}${routes.home}`}
+          >
             <img
               className={style.ozen_sushi_logo}
               src={logo}
@@ -119,51 +121,49 @@ const Header = ({ ozen_sushi, location: { pathname } }) => {
             />
           </NavLink>
         </Item>
-        <Item current={pathname === `${ozen_sushi}`} className={style.home}>
+        <Item
+          current={pathname === `${routes.ozen_sushi_root}${routes.home}`}
+          className={style.home}
+        >
           <NavLink
             className={style.container_sushi_header__ul__li__a}
-            to={ozen_sushi}
+            to={`${routes.ozen_sushi_root}${routes.home}`}
           >
             Home
           </NavLink>
         </Item>
         <Item
-          current={pathname === `${ozen_sushi}/about`}
+          current={pathname === `${routes.ozen_sushi_root}${routes.about}`}
           className={style.about}
         >
           <NavLink
             className={style.container_sushi_header__ul__li__a}
-            to={`${ozen_sushi}/about`}
+            to={`${routes.ozen_sushi_root}${routes.about}`}
           >
             About
           </NavLink>
         </Item>
         <Item
-          current={pathname === `${ozen_sushi}/menu`}
+          current={pathname === `${routes.ozen_sushi_root}${routes.menu}`}
           className={style.menu}
         >
           <NavLink
             className={style.container_sushi_header__ul__li__a}
-            to={`${ozen_sushi}/menu`}
+            to={`${routes.ozen_sushi_root}${routes.menu}`}
           >
             Menu
           </NavLink>
         </Item>
         <Item
-          current={pathname === `${ozen_sushi}/contact`}
+          current={pathname === `${routes.ozen_sushi_root}${routes.contact}`}
           className={style.contact_us}
         >
           <NavLink
             className={style.container_sushi_header__ul__li__a}
-            to={`${ozen_sushi}/contact`}
+            to={`${routes.ozen_sushi_root}${routes.contact}`}
           >
             Contact Us
           </NavLink>
-        </Item>
-        <Item>
-          <a className={style.ozen_korea} href={`/ozen_korea`}>
-            Go to Ozen Korea
-          </a>
         </Item>
       </ul>
     </nav>

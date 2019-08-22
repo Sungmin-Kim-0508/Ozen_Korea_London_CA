@@ -1,6 +1,7 @@
 import React from "react";
 import style from "../../../assets/styles/partial/ozen_sushi_footer.module.scss";
 import { NavLink } from "react-router-dom";
+import { routes } from "../../routes";
 
 const Footer = () => {
   return (
@@ -21,11 +22,11 @@ const Footer = () => {
         {/* Section 2 (Opening Hours) */}
         <section className={style.openingHours}>
           <div className={style.title}>Opening Hours</div>
-          <div className={style.daysOfWeek}>Mon. - Thur. :</div>
+          <div className={style.daysOfWeek}>Mon - Thur</div>
           <div className={style.operationTime}>12 PM - 9 PM</div>
-          <div className={style.daysOfWeek}>Fri. - Sat. : </div>
+          <div className={style.daysOfWeek}>Fri - Sat</div>
           <div className={style.operationTime}>12 PM - 9:30 PM</div>
-          <div className={style.daysOfWeek}>Sun. : </div>
+          <div className={style.daysOfWeek}>Sun</div>
           <div className={style.operationTime}>12 PM - 8:30 PM</div>
         </section>
       </div>
@@ -39,23 +40,23 @@ const Footer = () => {
 const NavigationList = [
   {
     className: style.navList__ul__li,
-    to: "/ozen_sushi",
+    to: `${routes.ozen_sushi_root}${routes.home}`,
     navName: "Home"
   },
   {
     className: style.navList__ul__li,
-    to: "/ozen_sushi/about",
+    to: `${routes.ozen_sushi_root}${routes.about}`,
 
     navName: "About Us"
   },
   {
     className: style.navList__ul__li,
-    to: "/ozen_sushi/menu",
+    to: `${routes.ozen_sushi_root}${routes.menu}`,
     navName: "Menu"
   },
   {
     className: style.navList__ul__li,
-    to: "/ozen_sushi/contact",
+    to: `${routes.ozen_sushi_root}${routes.contact}`,
     navName: "Contact Us"
   }
 ];

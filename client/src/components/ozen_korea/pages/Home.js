@@ -44,7 +44,7 @@ class Home extends PureComponent {
             />
           </div>
           <div className={style.about_us}>
-            <Link to={`${ozen_korea}/about_us`}>About Us</Link>
+            <Link to="#">About Us</Link>
           </div>
           <div className={style.photo_2}>
             <img
@@ -105,7 +105,7 @@ class Home extends PureComponent {
         {/* Section 5 - Uber and Skip the dish */}
         <section className={style.section_5}>
           <a
-            href="https://www.skipthedishes.com/"
+            href="https://www.skipthedishes.com/ozen-korea"
             className={style.skip_the_dishes}
           >
             <img src={skipdish} alt="skip the dish logo" />

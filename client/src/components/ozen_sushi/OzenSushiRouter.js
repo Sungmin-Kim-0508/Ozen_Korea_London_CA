@@ -6,6 +6,7 @@ import About from "../ozen_sushi/pages/About";
 import Contact from "../ozen_sushi/pages/Contact";
 import Footer from "./pages/Footer";
 import Menu from "./pages/Menu/";
+import { routes } from "../routes";
 
 class OzenSushiRouter extends Component {
   render() {
@@ -17,10 +18,26 @@ class OzenSushiRouter extends Component {
         <Switch>
           <Router>
             <Header ozen_sushi={url} />
-            <Route exact path={url} component={Home} />
-            <Route path={`${url}/about`} component={About} />
-            <Route path={`${url}/menu`} component={Menu} />
-            <Route path={`${url}/contact`} component={Contact} />
+            <Route
+              exact
+              path={`${routes.ozen_sushi_root}${routes.home}`}
+              component={Home}
+            />
+            <Route
+              path={`${routes.ozen_sushi_root}${routes.about}`}
+              component={About}
+            />
+            <Route
+              path={`${routes.ozen_sushi_root}${routes.menu}`}
+              component={Menu}
+            />
+            <Route
+              path={`${routes.ozen_sushi_root}${routes.contact}`}
+              component={Contact}
+            />
+            {/* <Route path={`${routes.ozen_sushi_root}${routes.about}`} component={About} />
+            <Route path={`${routes.ozen_sushi_root}${routes.menu}`} component={Menu} />
+            <Route path={`${routes.ozen_sushi_root}${routes.contact}`} component={Contact} /> */}
             <Footer />
           </Router>
         </Switch>
