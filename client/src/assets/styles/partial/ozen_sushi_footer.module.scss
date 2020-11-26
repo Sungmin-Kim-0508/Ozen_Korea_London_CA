@@ -94,14 +94,14 @@
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: repeat(1, 1fr);
-    padding: 1.5rem 4rem;
+    padding: 1.5rem;
 
     .information {
       display: grid;
       grid-auto-flow: row;
       grid-gap: 20px;
       grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(auto-fit, 1fr);
+      // grid-template-rows: repeat(auto-fit, 1fr);
 
       /* Section 1 (Navigation List) */
       .navList {

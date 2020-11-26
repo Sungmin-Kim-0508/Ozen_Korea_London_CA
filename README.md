@@ -1,8 +1,23 @@
 # Ozen Korea/Ozen Sushi London Ontario Canada
 
-## About
+## Link
+https://ozen-london-on-ca.herokuapp.com/
 
-## Description
+## Live Demo
+
+* **Home**
+
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/nd2ejzucplwd21e8oess.gif)
+
+* **Menu**
+
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/j2id79zru04ouleviwpp.gif)
+
+* **Contact**
+
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/9zd5d61pkhyqjdpmrjsu.gif)
+
+
 
 ## What Tech we use
 
